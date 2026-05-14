@@ -1,6 +1,9 @@
 package main.java.Models;
 
-import main.java.enums.TimeSlotState;
+
+import main.java.exceptions.CapacityException;
+import main.java.interfaces.ITimeSlotState;
+import main.java.states.AvailableState;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -18,13 +21,15 @@ public class TimeSlot {
 
     private int maxCapacity;
 
-    private TimeSlotState state;
-
     private List<Registration> registrations;
+
+    private ITimeSlotState state;
 
     public TimeSlot() {
 
         registrations = new ArrayList<>();
+
+        state = new AvailableState();
     }
 
     public TimeSlot(int id,
@@ -39,13 +44,39 @@ public class TimeSlot {
         this.classroom = classroom;
         this.maxCapacity = maxCapacity;
 
-        this.state = TimeSlotState.AVAILABLE;
-
         registrations = new ArrayList<>();
+
+        state = new AvailableState();
     }
 
-    public boolean isFull() {
-        return registrations.size() >= maxCapacity;
+    public void register() {
+
+        try {
+			state.register(this);
+		} catch (CapacityException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    }
+
+    public void setState(ITimeSlotState state) {
+
+        this.state = state;
+    }
+
+    public ITimeSlotState getState() {
+
+        return state;
+    }
+
+    public int getMaxCapacity() {
+
+        return maxCapacity;
+    }
+
+    public List<Registration> getRegistrations() {
+
+        return registrations;
     }
 
     // GETTERS & SETTERS
