@@ -1,6 +1,6 @@
 package main.java.Models;
 
-import enums.TimeSlotState;
+import main.java.enums.TimeSlotState;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -30,7 +30,7 @@ public class TimeSlot {
     public TimeSlot(int id,
                     String subject,
                     LocalDateTime schedule,
-                    Classroom classroom,
+                    ClassRoom classroom,
                     int maxCapacity) {
 
         this.id = id;

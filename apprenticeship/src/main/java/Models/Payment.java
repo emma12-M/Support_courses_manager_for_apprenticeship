@@ -1,6 +1,6 @@
-package models;
+package main.java.Models;
 
-import enums.PaymentType;
+import main.java.enums.PaymentType;
 
 public class Payment {
 
