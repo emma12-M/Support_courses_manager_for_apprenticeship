@@ -1,7 +1,13 @@
-package strategyPattern;
+package main.java.strategies;
 
-import apprenticeship.PaymentStrategy;
+import main.java.interfaces.PaymentStrategy;
 
-public class SinglePayment implements PaymentStrategy{
+public class SinglePayment implements PaymentStrategy {
 
+    @Override
+    public double calculatePayment(double totalAmount,
+                                   int installmentCount) {
+
+        return totalAmount;
+    }
 }
