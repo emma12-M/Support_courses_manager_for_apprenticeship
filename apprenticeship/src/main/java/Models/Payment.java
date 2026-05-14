@@ -65,4 +65,36 @@ public class Payment {
 
         return remainingAmount <= 0;
     }
+
+	public int getId() {
+		return id;
+	}
+
+	public double getTotalAmount() {
+		return totalAmount;
+	}
+
+	public double getPaidAmount() {
+		return paidAmount;
+	}
+
+	public double getRemainingAmount() {
+		return remainingAmount;
+	}
+
+	public int getInstallmentCount() {
+		return installmentCount;
+	}
+
+	public int getCompletedInstallments() {
+		return completedInstallments;
+	}
+
+	public int getRemainingInstallments() {
+		return remainingInstallments;
+	}
+
+	public PaymentType getPaymentType() {
+		return paymentType;
+	}
 }
