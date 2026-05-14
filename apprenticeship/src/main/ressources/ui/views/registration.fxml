@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10"
+      alignment="CENTER"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="ui.controllers.RegistrationController">
+
+    <Label text="Registration"
+           style="-fx-font-size: 22;" />
+
+    <TextField promptText="Child First Name" />
+
+    <TextField promptText="Child Last Name" />
+
+    <ComboBox promptText="Select Time Slot" />
+
+    <Button text="Register"
+            onAction="#handleRegistration"/>
+
+</VBox>
