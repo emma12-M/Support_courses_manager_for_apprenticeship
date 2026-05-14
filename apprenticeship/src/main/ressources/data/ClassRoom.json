@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "name": "Salle A1",
+    "capacity": 30
+  },
+  {
+    "id": 2,
+    "name": "Labo Physique",
+    "capacity": 15
+  },
+  {
+    "id": 3,
+    "name": "Salle B4",
+    "capacity": 25
+  },
+  {
+    "id": 4,
+    "name": "Salle Multimédia",
+    "capacity": 20
+  },
+  {
+    "id": 5,
+    "name": "Gymnase",
+    "capacity": 50
+  }
+]
