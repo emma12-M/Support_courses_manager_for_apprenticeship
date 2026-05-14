@@ -14,6 +14,10 @@ public class Payment {
 
     private int installmentCount;
 
+    private int completedInstallments;
+
+    private int remainingInstallments;
+
     private PaymentType paymentType;
 
     public Payment() {
@@ -30,7 +34,12 @@ public class Payment {
         this.paymentType = paymentType;
 
         this.paidAmount = 0;
+
         this.remainingAmount = totalAmount;
+
+        this.completedInstallments = 0;
+
+        this.remainingInstallments = installmentCount;
     }
 
     public void makePayment(double amount) {
@@ -38,11 +47,22 @@ public class Payment {
         paidAmount += amount;
 
         remainingAmount -= amount;
+
+        completedInstallments++;
+
+        remainingInstallments--;
+
+        if(remainingAmount < 0) {
+            remainingAmount = 0;
+        }
+
+        if(remainingInstallments < 0) {
+            remainingInstallments = 0;
+        }
     }
 
     public boolean isCompleted() {
+
         return remainingAmount <= 0;
     }
-
-    // GETTERS & SETTERS
 }
