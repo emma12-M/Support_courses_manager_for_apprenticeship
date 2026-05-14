@@ -1,18 +1,6 @@
 package main.java.Models;
 
-
-
-public  abstract class User {
-	
-
-	
-	
 public abstract class User {
-
-
-
-
-
 
     protected int id;
 
@@ -83,4 +71,4 @@ public abstract class User {
     public void setPassword(String password) {
         this.password = password;
     }
-}}
+}
