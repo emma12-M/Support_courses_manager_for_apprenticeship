@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="ui.controllers.DashboardParentController">
+
+    <top>
+        <Label fx:id="welcomeLabel"
+               style="-fx-font-size: 22;" />
+    </top>
+
+</BorderPane>
