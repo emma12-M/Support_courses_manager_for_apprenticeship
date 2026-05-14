@@ -1,4 +1,4 @@
-package models;
+package main.java.Models;
 
 public class Administrator extends User {
 

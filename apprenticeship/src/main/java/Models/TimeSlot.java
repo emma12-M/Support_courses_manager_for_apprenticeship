@@ -1,4 +1,4 @@
-package models;
+package main.java.Models;
 
 import enums.TimeSlotState;
 
@@ -14,7 +14,7 @@ public class TimeSlot {
 
     private LocalDateTime schedule;
 
-    private Classroom classroom;
+    private ClassRoom classroom;
 
     private int maxCapacity;
 

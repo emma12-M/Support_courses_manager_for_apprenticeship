@@ -1,6 +1,6 @@
-package models;
+package main.java.Models;
 
-public class Classroom {
+public class ClassRoom {
 
     private int id;
 
@@ -8,10 +8,10 @@ public class Classroom {
 
     private int capacity;
 
-    public Classroom() {
+    public ClassRoom() {
     }
 
-    public Classroom(int id,
+    public ClassRoom(int id,
                      String name,
                      int capacity) {
 
