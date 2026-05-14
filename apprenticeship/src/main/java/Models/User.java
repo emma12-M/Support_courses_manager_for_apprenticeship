@@ -1,14 +1,18 @@
 package main.java.Models;
 
-<<<<<<< HEAD
+
+
 public  abstract class User {
 	
 
 	
 	
-=======
 public abstract class User {
->>>>>>> 18576d7f4951d139d94b8b47df8ab56969710928
+
+
+
+
+
 
     protected int id;
 
@@ -79,4 +83,4 @@ public abstract class User {
     public void setPassword(String password) {
         this.password = password;
     }
-}
+}}
