@@ -1,5 +1,9 @@
 package apprenticeship;
 
-public interface User {
+public  abstract class User {
+	
+
+	
+	
 
 }
