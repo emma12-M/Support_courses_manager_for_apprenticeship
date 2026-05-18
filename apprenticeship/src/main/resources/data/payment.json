@@ -1,0 +1,11 @@
+[ {
+  "id" : 6753,
+  "totalAmount" : 120.0,
+  "paidAmount" : 0.0,
+  "remainingAmount" : 120.0,
+  "installmentCount" : 1,
+  "completedInstallments" : 0,
+  "remainingInstallments" : 1,
+  "paymentType" : "SINGLE_PAYMENT",
+  "completed" : false
+} ]
