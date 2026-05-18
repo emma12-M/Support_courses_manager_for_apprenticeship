@@ -53,7 +53,7 @@
                 maxWidth="Infinity" />
 
         <!-- Aide connexion -->
-        <Label text="Comptes de test:\n👤 emma@gmail.com / 1234\n👨‍💼 admin@ecole.fr / admin123"
+       <Label text="Comptes de test:\n👤 emma@gmail.com / 1234\n👨‍💼 admin@ecole.fr / admin123"
                style="-fx-font-size: 11; -fx-text-fill: #6b7280; -fx-font-style: italic; -fx-wrap-text: true;"
                alignment="CENTER" />
 

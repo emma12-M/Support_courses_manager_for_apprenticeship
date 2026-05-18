@@ -1,9 +1,37 @@
 [
   {
-    "id": 99,
-    "firstName": "Marie",
-    "lastName": "Admin",
-    "email": "admin@ecole.fr",
-    "password": "admin123"
+    "id": 51,
+    "firstName": "Robert",
+    "lastName": "Durand",
+    "email": "robert.durand@admin.com",
+    "password": "admin_secure_password_1"
+  },
+  {
+    "id": 52,
+    "firstName": "Chantal",
+    "lastName": "Dubois",
+    "email": "chantal.dubois@admin.com",
+    "password": "admin_secure_password_2"
+  },
+  {
+    "id": 53,
+    "firstName": "Marc",
+    "lastName": "Lucas",
+    "email": "marc.lucas@admin.com",
+    "password": "admin_secure_password_3"
+  },
+  {
+    "id": 54,
+    "firstName": "Alice",
+    "lastName": "Simon",
+    "email": "alice.simon@admin.com",
+    "password": "admin_secure_password_4"
+  },
+  {
+    "id": 55,
+    "firstName": "Gérard",
+    "lastName": "Faure",
+    "email": "gerard.faure@admin.com",
+    "password": "admin_secure_password_5"
   }
 ]

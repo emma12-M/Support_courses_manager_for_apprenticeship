@@ -1,0 +1,14 @@
+/Models/
+/app/
+/enums/
+/exceptions/
+/facades/
+/factories/
+/interfaces/
+/observers/
+/repositories/
+/services/
+/singleton/
+/states/
+/strategies/
+/ui/
