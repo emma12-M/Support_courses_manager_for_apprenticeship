@@ -1,4 +1,4 @@
-package main.java.Models;
+package Models;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,3 +39,5 @@ public class Parent extends User {
         this.children = children;
     }
 }
+
+

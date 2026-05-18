@@ -1,8 +1,8 @@
-package main.java.states;
+package states;
 
-import main.java.exceptions.CapacityException;
-import main.java.interfaces.ITimeSlotState;
-import main.java.Models.TimeSlot;
+import exceptions.CapacityException;
+import interfaces.ITimeSlotState;
+import Models.TimeSlot;
 
 public class FullState
         implements ITimeSlotState {
@@ -14,3 +14,5 @@ public class FullState
         );
     }
 }
+
+

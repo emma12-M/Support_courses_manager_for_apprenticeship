@@ -1,0 +1,274 @@
+/* ============================================================
+   style.css — Gestion des Cours de Soutien
+   Design moderne et professionnel
+   ============================================================ */
+
+/* ──────────────────────────────────────────────────────── */
+/* 🎨 PALETTE DE COULEURS                                  */
+/* ──────────────────────────────────────────────────────── */
+/*
+   Primary Blue: #1e3a8a
+   Secondary Blue: #2563eb
+   Success Green: #10b981
+   Warning Orange: #f59e0b
+   Danger Red: #ef4444
+   Light Gray: #f3f4f6
+   Dark Gray: #1f2937
+*/
+
+/* ── Fond général de l'application ── */
+.root {
+    -fx-font-family: "Segoe UI", "System Font", "-apple-system", sans-serif;
+    -fx-background-color: #f9fafb;
+    -fx-font-size: 13px;
+}
+
+/* ── Boutons standard ── */
+.button {
+    -fx-background-color: #2563eb;
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-padding: 10 20;
+    -fx-background-radius: 6;
+    -fx-cursor: hand;
+    -fx-border-width: 0;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 4, 0, 0, 1);
+}
+
+.button:hover {
+    -fx-background-color: #1d4ed8;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 6, 0, 0, 2);
+}
+
+.button:pressed {
+    -fx-background-color: #1e40af;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 4, 0, 0, 1);
+}
+
+/* ── Labels ── */
+.label {
+    -fx-text-fill: #1f2937;
+}
+
+.label-header {
+    -fx-text-fill: #1f2937;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+/* ── Champs de texte ── */
+.text-field, .password-field {
+    -fx-background-color: white;
+    -fx-border-color: #e5e7eb;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-padding: 10 12;
+    -fx-font-size: 13px;
+    -fx-text-fill: #1f2937;
+    -fx-border-width: 2;
+}
+
+.text-field:focused, .password-field:focused {
+    -fx-border-color: #2563eb;
+    -fx-effect: dropshadow(gaussian, rgba(37, 99, 235, 0.2), 8, 0, 0, 2);
+}
+
+.text-field:error, .password-field:error {
+    -fx-border-color: #ef4444;
+}
+
+/* ── ComboBox ── */
+.combo-box {
+    -fx-background-color: white;
+    -fx-border-color: #e5e7eb;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-border-width: 2;
+}
+
+.combo-box:focused {
+    -fx-border-color: #2563eb;
+    -fx-effect: dropshadow(gaussian, rgba(37, 99, 235, 0.2), 8, 0, 0, 2);
+}
+
+/* ── TableView ── */
+.table-view {
+    -fx-background-color: white;
+    -fx-border-color: #e5e7eb;
+    -fx-border-radius: 6;
+}
+
+.table-view .column-header {
+    -fx-background-color: #f3f4f6;
+    -fx-text-fill: #1f2937;
+    -fx-font-weight: bold;
+    -fx-padding: 10;
+}
+
+.table-row-cell {
+    -fx-padding: 8 0;
+    -fx-border-color: #f3f4f6;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #dbeafe;
+}
+
+/* ── ListView ── */
+.list-view {
+    -fx-background-color: white;
+    -fx-border-color: #e5e7eb;
+    -fx-border-radius: 6;
+}
+
+.list-cell {
+    -fx-padding: 12 15;
+    -fx-font-size: 13px;
+    -fx-text-fill: #1f2937;
+}
+
+.list-cell:odd {
+    -fx-background-color: #ffffff;
+}
+
+.list-cell:even {
+    -fx-background-color: #f9fafb;
+}
+
+.list-cell:selected {
+    -fx-background-color: #dbeafe;
+    -fx-text-fill: #1e40af;
+    -fx-font-weight: bold;
+}
+
+/* ── Séparateur ── */
+.separator .line {
+    -fx-border-color: #e5e7eb;
+}
+
+/* ── ScrollPane ── */
+.scroll-pane {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.scroll-bar {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar:vertical .thumb,
+.scroll-bar:horizontal .thumb {
+    -fx-background-color: #d1d5db;
+    -fx-background-radius: 4;
+}
+
+.scroll-bar:vertical .thumb:hover,
+.scroll-bar:horizontal .thumb:hover {
+    -fx-background-color: #9ca3af;
+}
+
+/* ── VBox / HBox ── */
+.vbox, .hbox {
+    -fx-spacing: 10;
+}
+
+/* ── ──────────────────────────────── ── */
+/* 🎯 CLASSES UTILITAIRES            */
+/* ── ──────────────────────────────── ── */
+
+/* Titre de section */
+.section-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1e3a8a;
+}
+
+.subsection-title {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1f2937;
+}
+
+/* Carte (panel blanc avec ombre) */
+.card {
+    -fx-background-color: white;
+    -fx-padding: 20;
+    -fx-background-radius: 8;
+    -fx-border-color: #e5e7eb;
+    -fx-border-radius: 8;
+    -fx-border-width: 1;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 8, 0, 0, 2);
+}
+
+/* ── ──────────────────────────────── ── */
+/* 🟢 BOUTONS VARIANTES                */
+/* ── ──────────────────────────────── ── */
+
+/* Bouton succès (vert) */
+.button-success {
+    -fx-background-color: #10b981;
+    -fx-text-fill: white;
+}
+
+.button-success:hover {
+    -fx-background-color: #059669;
+}
+
+/* Bouton danger (rouge) */
+.button-danger {
+    -fx-background-color: #ef4444;
+    -fx-text-fill: white;
+}
+
+.button-danger:hover {
+    -fx-background-color: #dc2626;
+}
+
+/* Bouton warning (orange) */
+.button-warning {
+    -fx-background-color: #f59e0b;
+    -fx-text-fill: white;
+}
+
+.button-warning:hover {
+    -fx-background-color: #d97706;
+}
+
+/* Bouton secondaire (gris) */
+.button-secondary {
+    -fx-background-color: #6b7280;
+    -fx-text-fill: white;
+}
+
+.button-secondary:hover {
+    -fx-background-color: #4b5563;
+}
+
+/* ── ──────────────────────────────── ── */
+/* 📝 TEXTES ET MESSAGES              */
+/* ── ──────────────────────────────── ── */
+
+.text-success {
+    -fx-text-fill: #10b981;
+    -fx-font-weight: bold;
+}
+
+.text-error {
+    -fx-text-fill: #ef4444;
+    -fx-font-weight: bold;
+}
+
+.text-warning {
+    -fx-text-fill: #f59e0b;
+    -fx-font-weight: bold;
+}
+
+.text-info {
+    -fx-text-fill: #2563eb;
+    -fx-font-weight: bold;
+}
+
+.text-muted {
+    -fx-text-fill: #6b7280;
+}

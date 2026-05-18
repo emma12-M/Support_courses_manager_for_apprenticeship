@@ -1,9 +1,9 @@
-package main.java.factories;
+package factories;
 
-import main.java.enums.UserRole;
-import  main.java.Models.Administrator;
-import main.java.Models.Parent;
-import main.java.Models.User;
+import enums.UserRole;
+import  Models.Administrator;
+import Models.Parent;
+import Models.User;
 
 public class UserFactory {
 
@@ -44,3 +44,5 @@ public class UserFactory {
         }
     }
 }
+
+

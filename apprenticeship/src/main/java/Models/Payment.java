@@ -1,6 +1,6 @@
-package main.java.Models;
+package Models;
 
-import main.java.enums.PaymentType;
+import enums.PaymentType;
 
 public class Payment {
 
@@ -20,7 +20,10 @@ public class Payment {
 
     private PaymentType paymentType;
 
+    private boolean completed;
+
     public Payment() {
+        completed = false;
     }
 
     public Payment(int id,
@@ -59,14 +62,14 @@ public class Payment {
         if(remainingInstallments < 0) {
             remainingInstallments = 0;
         }
+        
+        // Marque le paiement comme complet si plus rien à payer
+        if(remainingAmount == 0) {
+            completed = true;
+        }
     }
 
-    public boolean isCompleted() {
-
-        return remainingAmount <= 0;
-    }
-
-	public int getId() {
+    public int getId() {
 		return id;
 	}
 
@@ -97,4 +100,45 @@ public class Payment {
 	public PaymentType getPaymentType() {
 		return paymentType;
 	}
+	
+	public boolean isCompleted() {
+		return completed;
+	}
+	
+	public void setCompleted(boolean completed) {
+		this.completed = completed;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public void setTotalAmount(double totalAmount) {
+		this.totalAmount = totalAmount;
+	}
+
+	public void setPaidAmount(double paidAmount) {
+		this.paidAmount = paidAmount;
+	}
+
+	public void setRemainingAmount(double remainingAmount) {
+		this.remainingAmount = remainingAmount;
+	}
+
+	public void setInstallmentCount(int installmentCount) {
+		this.installmentCount = installmentCount;
+	}
+
+	public void setCompletedInstallments(int completedInstallments) {
+		this.completedInstallments = completedInstallments;
+	}
+
+	public void setRemainingInstallments(int remainingInstallments) {
+		this.remainingInstallments = remainingInstallments;
+	}
+
+	public void setPaymentType(PaymentType paymentType) {
+		this.paymentType = paymentType;
+	}
 }
+

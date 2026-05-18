@@ -1,54 +1,86 @@
-package main.java.facades;
+package facades;
 
-import main.java.Models.Child;
-import main.java.Models.Parent;
-import main.java.Models.Payment;
-import main.java.Models.Registration;
-import main.java.Models.TimeSlot;
-import main.java.services.NotificationService;
-import main.java.services.PaymentService;
-import main.java.services.RegistrationService;
+import Models.Child;
+import Models.Parent;
+import Models.Payment;
+import Models.Registration;
+import Models.TimeSlot;
+import exceptions.CapacityException;
+import services.NotificationService;
+import services.PaymentService;
+import services.RegistrationService;
 
+/**
+ * PATTERN FACADE — Interface simplifiée pour le processus d'inscription.
+ *
+ * POURQUOI une Facade ?
+ *   Sans elle, le controller JavaFX devrait appeler 4 services dans le bon ordre.
+ *   Avec elle, le controller fait UN SEUL appel : completeRegistration(...)
+ *   La Facade orchestre tout en interne.
+ *
+ * CE QUE FAIT completeRegistration :
+ *   Étape 1 : Inscrit l'enfant au créneau (RegistrationService → PATTERN STATE)
+ *   Étape 2 : Traite le premier paiement (PaymentService → PATTERN STRATEGY)
+ *   Étape 3 : Notifie le parent (NotificationService → PATTERN OBSERVER)
+ *
+ * CORRECTIONS apportées :
+ *   - parentId est maintenant transmis à RegistrationService
+ *   - subscribeParent() passe l'ID du parent à ParentObserver
+ *     (pour persister la notification correctement)
+ *   - clearObservers() évite les doublons si plusieurs inscriptions
+ */
 public class ManagementFacade {
 
     private RegistrationService registrationService;
-
     private PaymentService paymentService;
-
     private NotificationService notificationService;
 
     public ManagementFacade() {
-
-        registrationService =
-                new RegistrationService();
-
-        paymentService =
-                new PaymentService();
-
-        notificationService =
-                new NotificationService();
+        registrationService = new RegistrationService();
+        paymentService = new PaymentService();
+        notificationService = new NotificationService();
     }
 
-    public void completeRegistration(Parent parent,
-                                     Child child,
-                                     TimeSlot timeSlot,
-                                     Payment payment) {
+    /**
+     * Effectue le processus complet d'inscription.
+     *
+     * @param parent    Le parent connecté
+     * @param child     L'enfant à inscrire
+     * @param timeSlot  Le créneau choisi
+     * @param payment   Le paiement (montant, type, versements)
+     * @throws CapacityException si le créneau est complet
+     */
+    public void completeRegistration(Parent parent, Child child,
+                                     TimeSlot timeSlot, Payment payment)
+            throws CapacityException {
 
-        Registration registration =
-                registrationService.registerChild(
-                        child,
-                        timeSlot,
-                        payment
-                );
+        // PATTERN OBSERVER :
+        // On s'assure de ne pas avoir d'anciens observateurs
+        notificationService.clearObservers();
 
-        paymentService.processPayment(payment);
-
-        notificationService.notifyObservers(
-                "Registration completed successfully"
+        // On abonne le parent avec son ID pour tracer la notification
+        notificationService.subscribeParent(
+            parent.getId(),
+            parent.getFirstName() + " " + parent.getLastName()
         );
 
-        System.out.println(
-                "Full registration completed"
+        // ÉTAPE 1 — Inscription (PATTERN STATE via timeSlot.register())
+        Registration registration = registrationService.registerChild(
+            child, timeSlot, payment, parent.getId()
         );
+
+        // ÉTAPE 2 — Traitement du paiement (PATTERN STRATEGY via PaymentFactory)
+        double paidAmount = paymentService.processPayment(payment);
+        // Le paiement est maintenant sauvegardé en JSON par PaymentService
+
+        // ÉTAPE 3 — Notification au parent (PATTERN OBSERVER)
+        String msg = "Inscription de " + child.getFirstName() + " " + child.getLastName()
+            + " au créneau \"" + timeSlot.getSubject() + "\""
+            + " confirmée. Montant du premier versement : "
+            + String.format("%.2f", payment.getPaidAmount()) + " €";
+
+        notificationService.notifyObservers(msg);
+
+        System.out.println("[ManagementFacade] Inscription complète effectuée.");
     }
 }

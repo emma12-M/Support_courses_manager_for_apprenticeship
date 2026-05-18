@@ -1,4 +1,4 @@
-package main.java.Models;
+package Models;
 
 public class Administrator extends User {
 
@@ -19,3 +19,5 @@ public class Administrator extends User {
         System.out.println("Administrator Dashboard");
     }
 }
+
+

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<ScrollPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="ui.controllers.RegistrationController"
+            style="-fx-background-color: #f9fafb; -fx-padding: 20;"
+            fitToWidth="true">
+
+    <VBox spacing="20"
+          alignment="TOP_CENTER"
+          style="-fx-padding: 30; -fx-background-color: white; -fx-background-radius: 12; -fx-border-color: #e5e7eb; -fx-border-width: 1; -fx-border-radius: 12;"
+          maxWidth="600">
+
+        <!-- En-tête -->
+        <VBox spacing="8" alignment="TOP_CENTER">
+            <Label text="📝 Inscription d'un enfant"
+                   style="-fx-font-size: 22; -fx-font-weight: bold; -fx-text-fill: #1e3a8a;" />
+            <Label text="Complétez les informations ci-dessous"
+                   style="-fx-font-size: 12; -fx-text-fill: #6b7280;" />
+            <Separator />
+        </VBox>
+
+        <!-- Prénom -->
+        <VBox spacing="6">
+            <Label text="👤 Prénom"
+                   style="-fx-font-size: 14; -fx-font-weight: bold; -fx-text-fill: #1f2937;" />
+            <TextField fx:id="firstNameField"
+                       promptText="Prénom" />
+        </VBox>
+
+        <!-- Nom -->
+        <VBox spacing="6">
+            <Label text="👥 Nom"
+                   style="-fx-font-size: 14; -fx-font-weight: bold; -fx-text-fill: #1f2937;" />
+            <TextField fx:id="lastNameField"
+                       promptText="Nom de famille" />
+        </VBox>
+
+        <!-- Niveau -->
+        <VBox spacing="6">
+            <Label text="📚 Niveau scolaire"
+                   style="-fx-font-size: 14; -fx-font-weight: bold; -fx-text-fill: #6b7280;" />
+            <TextField fx:id="levelField"
+                       promptText="Ex: 5ème, CE2, Terminale..." />
+        </VBox>
+
+        <!-- Créneau -->
+        <VBox spacing="6">
+            <Label text="⏱️ Créneau"
+                   style="-fx-font-size: 14; -fx-font-weight: bold; -fx-text-fill: #1f2937;" />
+            <ComboBox fx:id="timeSlotComboBox"
+                      promptText="Sélectionnez un créneau" />
+        </VBox>
+
+        <Separator style="-fx-padding: 10 0;" />
+
+        <!-- Section Paiement -->
+        <Label text="💳 Paiement"
+               style="-fx-font-size: 16; -fx-font-weight: bold; -fx-text-fill: #1f2937; -fx-padding: 10 0 5 0;" />
+
+        <!-- Mode de paiement -->
+        <VBox spacing="6">
+            <Label text="Mode de paiement"
+                   style="-fx-font-size: 14; -fx-font-weight: bold; -fx-text-fill: #1f2937;" />
+            <ComboBox fx:id="paymentTypeComboBox"
+                      promptText="Unique ou fractionné?" />
+        </VBox>
+
+        <!-- Montant -->
+        <VBox spacing="6">
+            <Label text="Montant total (€)"
+                   style="-fx-font-size: 14; -fx-font-weight: bold; -fx-text-fill: #1f2937;" />
+            <TextField fx:id="totalAmountField"
+                       promptText="Ex: 120.00" />
+        </VBox>
+
+        <!-- Versements (visible si mode fractionné) -->
+        <VBox spacing="6">
+            <Label fx:id="installmentLabel"
+                   text="Nombre de versements"
+                   style="-fx-font-size: 14; -fx-font-weight: bold; -fx-text-fill: #1f2937;"
+                   visible="false"
+                   managed="false" />
+            <TextField fx:id="installmentCountField"
+                       promptText="Entre 2 et 6"
+                       visible="false"
+                       managed="false" />
+        </VBox>
+
+        <Separator style="-fx-padding: 10 0;" />
+
+        <!-- Boutons d'action -->
+        <HBox spacing="12" alignment="CENTER" style="-fx-padding: 15 0 0 0;">
+            <Button text="✓ Inscrire"
+                    onAction="#handleRegistration"
+                    style="-fx-background-color: #10b981; -fx-text-fill: white; -fx-font-size: 14; -fx-font-weight: bold; -fx-padding: 12 30; -fx-background-radius: 6;"
+                    prefWidth="150" />
+            <Button text="✕ Fermer"
+                    onAction="#handleClose"
+                    style="-fx-background-color: #6b7280; -fx-text-fill: white; -fx-font-size: 14; -fx-padding: 12 30; -fx-background-radius: 6;"
+                    prefWidth="150" />
+        </HBox>
+
+        <!-- Message de statut -->
+        <Label fx:id="statusLabel"
+               style="-fx-font-size: 12; -fx-padding: 10; -fx-text-fill: #1f2937;"
+               wrapText="true" />
+
+    </VBox>
+
+</ScrollPane>

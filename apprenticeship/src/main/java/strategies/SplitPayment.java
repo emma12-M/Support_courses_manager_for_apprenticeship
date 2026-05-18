@@ -1,6 +1,6 @@
-package main.java.strategies;
+package strategies;
 
-import main.java.interfaces.PaymentStrategy;
+import interfaces.PaymentStrategy;
 
 public class SplitPayment implements PaymentStrategy {
 
@@ -15,3 +15,5 @@ public class SplitPayment implements PaymentStrategy {
         return totalAmount / installmentCount;
     }
 }
+
+

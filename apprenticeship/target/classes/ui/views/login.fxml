@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="ui.controllers.LoginController"
+      alignment="CENTER"
+      spacing="20"
+      style="-fx-background-color: #f9fafb; -fx-padding: 50;">
+
+    <!-- Conteneur principal avec Card effect -->
+    <VBox spacing="25"
+          style="-fx-background-color: white; -fx-padding: 40; -fx-background-radius: 12; -fx-border-color: #e5e7eb; -fx-border-width: 1; -fx-border-radius: 12; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 3);"
+          maxWidth="450">
+
+        <!-- En-tête -->
+        <VBox spacing="10" alignment="CENTER">
+            <Label text="📚 Gestion des Cours"
+                   styleClass="section-title"
+                   style="-fx-font-size: 28; -fx-text-fill: #1e3a8a;" />
+            <Label text="Connectez-vous à votre espace"
+                   style="-fx-font-size: 14; -fx-text-fill: #6b7280;" />
+            <Separator style="-fx-padding: 10 0 0 0;" />
+        </VBox>
+
+        <!-- Champ Email -->
+        <VBox spacing="6">
+            <Label text="📧 Adresse e-mail"
+                   styleClass="label-header"
+                   style="-fx-text-fill: #1f2937;" />
+            <TextField fx:id="emailField"
+                       promptText="votre@email.com"
+                       style="-fx-font-size: 13;" />
+        </VBox>
+
+        <!-- Champ Mot de passe -->
+        <VBox spacing="6">
+            <Label text="🔒 Mot de passe"
+                   styleClass="label-header"
+                   style="-fx-text-fill: #1f2937;" />
+            <PasswordField fx:id="passwordField"
+                           promptText="Votre mot de passe"
+                           style="-fx-font-size: 13;" />
+        </VBox>
+
+        <!-- Bouton connexion -->
+        <Button text="✓ Se connecter"
+                onAction="#handleLogin"
+                styleClass="button"
+                style="-fx-font-size: 14; -fx-font-weight: bold; -fx-padding: 14 0; -fx-background-color: #2563eb;"
+                maxWidth="Infinity" />
+
+        <!-- Aide connexion -->
+        <Label text="Comptes de test:\n👤 emma@gmail.com / 1234\n👨‍💼 admin@ecole.fr / admin123"
+               style="-fx-font-size: 11; -fx-text-fill: #6b7280; -fx-font-style: italic; -fx-wrap-text: true;"
+               alignment="CENTER" />
+
+    </VBox>
+
+</VBox>

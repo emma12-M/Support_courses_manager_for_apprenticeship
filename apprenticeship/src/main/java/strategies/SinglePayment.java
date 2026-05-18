@@ -1,6 +1,6 @@
-package main.java.strategies;
+package strategies;
 
-import main.java.interfaces.PaymentStrategy;
+import interfaces.PaymentStrategy;
 
 public class SinglePayment implements PaymentStrategy {
 
@@ -11,3 +11,5 @@ public class SinglePayment implements PaymentStrategy {
         return totalAmount;
     }
 }
+
+
