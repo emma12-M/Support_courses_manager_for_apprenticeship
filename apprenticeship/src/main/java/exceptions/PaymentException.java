@@ -1,4 +1,4 @@
-package main.java.exceptions;
+package exceptions;
 
 public class PaymentException extends Exception{
 
@@ -6,3 +6,4 @@ public class PaymentException extends Exception{
 		super(message);
 	}
 }
+

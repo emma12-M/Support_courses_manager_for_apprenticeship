@@ -1,7 +1,8 @@
-package main.java.interfaces;
+package interfaces;
 
 public interface PaymentStrategy {
 
     double calculatePayment(double totalAmount,
                             int installmentCount);
 }
+

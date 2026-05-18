@@ -1,0 +1,161 @@
+[ {
+  "id" : 101,
+  "parentId" : 1,
+  "firstName" : "Lucas",
+  "lastName" : "Dupont",
+  "age" : 8,
+  "level" : "CE2",
+  "birthDate" : "2018-05-12"
+}, {
+  "id" : 102,
+  "parentId" : 1,
+  "firstName" : "Léa",
+  "lastName" : "Dupont",
+  "age" : 10,
+  "level" : "CM2",
+  "birthDate" : "2016-03-20"
+}, {
+  "id" : 103,
+  "parentId" : 1,
+  "firstName" : "Hugo",
+  "lastName" : "Leroy",
+  "age" : 6,
+  "level" : "CP",
+  "birthDate" : "2020-09-15"
+}, {
+  "id" : 104,
+  "parentId" : 1,
+  "firstName" : "Emma",
+  "lastName" : "Bernard",
+  "age" : 12,
+  "level" : "5ème",
+  "birthDate" : "2014-01-10"
+}, {
+  "id" : 105,
+  "parentId" : 1,
+  "firstName" : "Chloé",
+  "lastName" : "Petit",
+  "age" : 7,
+  "level" : "CE1",
+  "birthDate" : "2019-07-22"
+}, {
+  "id" : 106,
+  "parentId" : 1,
+  "firstName" : "Enzo",
+  "lastName" : "Richard",
+  "age" : 9,
+  "level" : "CM1",
+  "birthDate" : "2017-11-05"
+}, {
+  "id" : 107,
+  "parentId" : 1,
+  "firstName" : "Manon",
+  "lastName" : "Richard",
+  "age" : 5,
+  "level" : "Grande Section",
+  "birthDate" : "2021-02-14"
+}, {
+  "id" : 108,
+  "parentId" : 1,
+  "firstName" : "Arthur",
+  "lastName" : "Dubois",
+  "age" : 14,
+  "level" : "3ème",
+  "birthDate" : "2012-06-30"
+}, {
+  "id" : 109,
+  "parentId" : 1,
+  "firstName" : "Zoe",
+  "lastName" : "Lefebvre",
+  "age" : 4,
+  "level" : "Moyenne Section",
+  "birthDate" : "2022-04-18"
+}, {
+  "id" : 110,
+  "parentId" : 1,
+  "firstName" : "Gabriel",
+  "lastName" : "Michel",
+  "age" : 11,
+  "level" : "6ème",
+  "birthDate" : "2015-08-01"
+}, {
+  "id" : 111,
+  "parentId" : 1,
+  "firstName" : "Inès",
+  "lastName" : "Garcia",
+  "age" : 13,
+  "level" : "4ème",
+  "birthDate" : "2013-10-11"
+}, {
+  "id" : 112,
+  "parentId" : 1,
+  "firstName" : "Mathis",
+  "lastName" : "Martinez",
+  "age" : 15,
+  "level" : "Seconde",
+  "birthDate" : "2011-05-04"
+}, {
+  "id" : 113,
+  "parentId" : 1,
+  "firstName" : "Clara",
+  "lastName" : "Bonnet",
+  "age" : 3,
+  "level" : "Petite Section",
+  "birthDate" : "2023-01-15"
+}, {
+  "id" : 114,
+  "parentId" : 1,
+  "firstName" : "Raphaël",
+  "lastName" : "Rousseau",
+  "age" : 16,
+  "level" : "Première",
+  "birthDate" : "2010-12-03"
+}, {
+  "id" : 115,
+  "parentId" : 1,
+  "firstName" : "Théo",
+  "lastName" : "Blanc",
+  "age" : 17,
+  "level" : "Terminale",
+  "birthDate" : "2009-08-27"
+}, {
+  "id" : 116,
+  "parentId" : 1,
+  "firstName" : "Mila",
+  "lastName" : "Guerin",
+  "age" : 6,
+  "level" : "CP",
+  "birthDate" : "2020-04-09"
+}, {
+  "id" : 117,
+  "parentId" : 1,
+  "firstName" : "Jules",
+  "lastName" : "Muller",
+  "age" : 9,
+  "level" : "CM1",
+  "birthDate" : "2017-02-19"
+}, {
+  "id" : 118,
+  "parentId" : 1,
+  "firstName" : "Noé",
+  "lastName" : "Roux",
+  "age" : 10,
+  "level" : "CM2",
+  "birthDate" : "2016-11-11"
+}, {
+  "id" : 0,
+  "parentId" : 1,
+  "firstName" : "KAMDEM",
+  "lastName" : "Manuel",
+  "age" : 0,
+  "level" : null,
+  "birthDate" : null
+}, {
+  "id" : 6635,
+  "parentId" : 1,
+  "firstName" : "joyce",
+  "lastName" : "moguo",
+  "age" : 0,
+  "level" : "CE2",
+  "birthDate" : null
+} ]

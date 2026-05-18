@@ -1,14 +1,17 @@
-package main.java.services;
+package services;
 
-import main.java.factories.PaymentFactory;
-import main.java.interfaces.PaymentStrategy;
-import main.java.Models.Payment;
+import factories.PaymentFactory;
+import interfaces.PaymentStrategy;
+import Models.Payment;
+import repositories.PaymentRepository;
 
 public class PaymentService {
 
     private PaymentStrategy paymentStrategy;
+    private PaymentRepository paymentRepository;
 
     public PaymentService() {
+        paymentRepository = new PaymentRepository();
     }
 
     public void setPaymentStrategy(
@@ -35,7 +38,11 @@ public class PaymentService {
                 );
 
         payment.makePayment(amount);
+        
+        // CORRECTION : Sauvegarde le paiement en JSON
+        paymentRepository.save(payment);
 
         return amount;
     }
 }
+

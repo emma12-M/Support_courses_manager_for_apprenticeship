@@ -1,0 +1,89 @@
+[ {
+  "id" : 1,
+  "subject" : "Mathématiques",
+  "schedule" : "2026-05-18T08:30:00",
+  "classroom" : {
+    "id" : 1,
+    "name" : "Salle A1",
+    "capacity" : 30
+  },
+  "maxCapacity" : 25,
+  "registrationCount" : 1
+}, {
+  "id" : 2,
+  "subject" : "Physique-Chimie",
+  "schedule" : "2026-05-18T10:30:00",
+  "classroom" : {
+    "id" : 2,
+    "name" : "Labo Physique",
+    "capacity" : 15
+  },
+  "maxCapacity" : 12,
+  "registrationCount" : 0
+}, {
+  "id" : 3,
+  "subject" : "Anglais",
+  "schedule" : "2026-05-19T09:00:00",
+  "classroom" : {
+    "id" : 4,
+    "name" : "Salle Multimédia",
+    "capacity" : 20
+  },
+  "maxCapacity" : 15,
+  "registrationCount" : 0
+}, {
+  "id" : 4,
+  "subject" : "SVT",
+  "schedule" : "2026-05-19T15:30:00",
+  "classroom" : {
+    "id" : 3,
+    "name" : "Salle B4",
+    "capacity" : 25
+  },
+  "maxCapacity" : 20,
+  "registrationCount" : 0
+}, {
+  "id" : 5,
+  "subject" : "Informatique",
+  "schedule" : "2026-05-21T09:00:00",
+  "classroom" : {
+    "id" : 4,
+    "name" : "Salle Multimédia",
+    "capacity" : 20
+  },
+  "maxCapacity" : 18,
+  "registrationCount" : 0
+}, {
+  "id" : 6,
+  "subject" : "Histoire",
+  "schedule" : "2026-05-21T14:00:00",
+  "classroom" : {
+    "id" : 1,
+    "name" : "Salle A1",
+    "capacity" : 30
+  },
+  "maxCapacity" : 25,
+  "registrationCount" : 0
+}, {
+  "id" : 7,
+  "subject" : "Français",
+  "schedule" : "2026-05-22T08:30:00",
+  "classroom" : {
+    "id" : 3,
+    "name" : "Salle B4",
+    "capacity" : 25
+  },
+  "maxCapacity" : 20,
+  "registrationCount" : 0
+}, {
+  "id" : 8,
+  "subject" : "EPS",
+  "schedule" : "2026-05-22T14:00:00",
+  "classroom" : {
+    "id" : 5,
+    "name" : "Gymnase",
+    "capacity" : 50
+  },
+  "maxCapacity" : 40,
+  "registrationCount" : 0
+} ]

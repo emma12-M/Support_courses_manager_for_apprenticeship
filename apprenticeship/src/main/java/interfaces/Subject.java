@@ -1,4 +1,4 @@
-package main.java.interfaces;
+package interfaces;
 
 public interface Subject {
 
@@ -8,3 +8,4 @@ public interface Subject {
 
     void notifyObservers(String message);
 }
+

@@ -1,7 +1,7 @@
-package main.java.services;
+package services;
 
-import main.java.Models.TimeSlot;
-import main.java.repositories.TimeSlotRepository;
+import Models.TimeSlot;
+import repositories.TimeSlotRepository;
 
 import java.util.List;
 
@@ -29,3 +29,4 @@ public class TimeSlotService {
         );
     }
 }
+
