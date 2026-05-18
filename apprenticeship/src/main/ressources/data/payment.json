@@ -1,0 +1,322 @@
+[
+  {
+    "id": 1,
+    "child": { "id": 101, "firstName": "Lucas", "lastName": "Dupont" },
+    "timeSlot": { "id": 1, "subject": "Mathématiques", "schedule": "2026-05-18T08:30:00" },
+    "registrationDate": "2026-05-10",
+    "payment": {
+      "id": 1,
+      "totalAmount": 100.0,
+      "paidAmount": 100.0,
+      "remainingAmount": 0.0,
+      "installmentCount": 1,
+      "completedInstallments": 1,
+      "remainingInstallments": 0,
+      "paymentType": "SINGLE_PAYMENT"
+    }
+  },
+  {
+    "id": 2,
+    "child": { "id": 103, "firstName": "Hugo", "lastName": "Leroy" },
+    "timeSlot": { "id": 1, "subject": "Mathématiques", "schedule": "2026-05-18T08:30:00" },
+    "registrationDate": "2026-05-11",
+    "payment": {
+      "id": 2,
+      "totalAmount": 100.0,
+      "paidAmount": 50.0,
+      "remainingAmount": 50.0,
+      "installmentCount": 2,
+      "completedInstallments": 1,
+      "remainingInstallments": 1,
+      "paymentType": "SPLIT_PAYMENT"
+    }
+  },
+  {
+    "id": 3,
+    "child": { "id": 104, "firstName": "Emma", "lastName": "Bernard" },
+    "timeSlot": { "id": 3, "subject": "Anglais", "schedule": "2026-05-19T09:00:00" },
+    "registrationDate": "2026-05-11",
+    "payment": {
+      "id": 3,
+      "totalAmount": 80.0,
+      "paidAmount": 0.0,
+      "remainingAmount": 80.0,
+      "installmentCount": 1,
+      "completedInstallments": 0,
+      "remainingInstallments": 1,
+      "paymentType": "SINGLE_PAYMENT"
+    }
+  },
+  {
+    "id": 4,
+    "child": { "id": 106, "firstName": "Enzo", "lastName": "Richard" },
+    "timeSlot": { "id": 2, "subject": "Physique-Chimie", "schedule": "2026-05-18T10:30:00" },
+    "registrationDate": "2026-05-12",
+    "payment": {
+      "id": 4,
+      "totalAmount": 120.0,
+      "paidAmount": 40.0,
+      "remainingAmount": 80.0,
+      "installmentCount": 3,
+      "completedInstallments": 1,
+      "remainingInstallments": 2,
+      "paymentType": "SPLIT_PAYMENT"
+    }
+  },
+  {
+    "id": 5,
+    "child": { "id": 108, "firstName": "Arthur", "lastName": "Dubois" },
+    "timeSlot": { "id": 5, "subject": "Informatique", "schedule": "2026-05-21T09:00:00" },
+    "registrationDate": "2026-05-13",
+    "payment": {
+      "id": 5,
+      "totalAmount": 150.0,
+      "paidAmount": 150.0,
+      "remainingAmount": 0.0,
+      "installmentCount": 1,
+      "completedInstallments": 1,
+      "remainingInstallments": 0,
+      "paymentType": "SINGLE_PAYMENT"
+    }
+  },
+  {
+    "id": 6,
+    "child": { "id": 110, "firstName": "Gabriel", "lastName": "Michel" },
+    "timeSlot": { "id": 5, "subject": "Informatique", "schedule": "2026-05-21T09:00:00" },
+    "registrationDate": "2026-05-13",
+    "payment": {
+      "id": 6,
+      "totalAmount": 150.0,
+      "paidAmount": 75.0,
+      "remainingAmount": 75.0,
+      "installmentCount": 2,
+      "completedInstallments": 1,
+      "remainingInstallments": 1,
+      "paymentType": "SPLIT_PAYMENT"
+    }
+  },
+  {
+    "id": 7,
+    "child": { "id": 112, "firstName": "Mathis", "lastName": "Martinez" },
+    "timeSlot": { "id": 6, "subject": "Histoire", "schedule": "2026-05-21T14:00:00" },
+    "registrationDate": "2026-05-14",
+    "payment": {
+      "id": 7,
+      "totalAmount": 90.0,
+      "paidAmount": 90.0,
+      "remainingAmount": 0.0,
+      "installmentCount": 1,
+      "completedInstallments": 1,
+      "remainingInstallments": 0,
+      "paymentType": "SINGLE_PAYMENT"
+    }
+  },
+  {
+    "id": 8,
+    "child": { "id": 114, "firstName": "Raphaël", "lastName": "Rousseau" },
+    "timeSlot": { "id": 7, "subject": "Français", "schedule": "2026-05-22T08:30:00" },
+    "registrationDate": "2026-05-14",
+    "payment": {
+      "id": 8,
+      "totalAmount": 110.0,
+      "paidAmount": 0.0,
+      "remainingAmount": 110.0,
+      "installmentCount": 2,
+      "completedInstallments": 0,
+      "remainingInstallments": 2,
+      "paymentType": "SPLIT_PAYMENT"
+    }
+  },
+  {
+    "id": 9,
+    "child": { "id": 115, "firstName": "Théo", "lastName": "Blanc" },
+    "timeSlot": { "id": 6, "subject": "Histoire", "schedule": "2026-05-21T14:00:00" },
+    "registrationDate": "2026-05-14",
+    "payment": {
+      "id": 9,
+      "totalAmount": 90.0,
+      "paidAmount": 30.0,
+      "remainingAmount": 60.0,
+      "installmentCount": 3,
+      "completedInstallments": 1,
+      "remainingInstallments": 2,
+      "paymentType": "SPLIT_PAYMENT"
+    }
+  },
+  {
+    "id": 10,
+    "child": { "id": 117, "firstName": "Jules", "lastName": "Muller" },
+    "timeSlot": { "id": 4, "subject": "SVT", "schedule": "2026-05-19T15:30:00" },
+    "registrationDate": "2026-05-14",
+    "payment": {
+      "id": 10,
+      "totalAmount": 100.0,
+      "paidAmount": 100.0,
+      "remainingAmount": 0.0,
+      "installmentCount": 1,
+      "completedInstallments": 1,
+      "remainingInstallments": 0,
+      "paymentType": "SINGLE_PAYMENT"
+    }
+  },
+  {
+    "id": 11,
+    "child": { "id": 118, "firstName": "Noé", "lastName": "Roux" },
+    "timeSlot": { "id": 2, "subject": "Physique-Chimie", "schedule": "2026-05-18T10:30:00" },
+    "registrationDate": "2026-05-15",
+    "payment": {
+      "id": 11,
+      "totalAmount": 120.0,
+      "paidAmount": 60.0,
+      "remainingAmount": 60.0,
+      "installmentCount": 2,
+      "completedInstallments": 1,
+      "remainingInstallments": 1,
+      "paymentType": "SPLIT_PAYMENT"
+    }
+  },
+  {
+    "id": 12,
+    "child": { "id": 105, "firstName": "Chloé", "lastName": "Petit" },
+    "timeSlot": { "id": 4, "subject": "SVT", "schedule": "2026-05-19T15:30:00" },
+    "registrationDate": "2026-05-15",
+    "payment": {
+      "id": 12,
+      "totalAmount": 100.0,
+      "paidAmount": 0.0,
+      "remainingAmount": 100.0,
+      "installmentCount": 1,
+      "completedInstallments": 0,
+      "remainingInstallments": 1,
+      "paymentType": "SINGLE_PAYMENT"
+    }
+  },
+  {
+    "id": 13,
+    "child": { "id": 107, "firstName": "Manon", "lastName": "Richard" },
+    "timeSlot": { "id": 3, "subject": "Anglais", "schedule": "2026-05-19T09:00:00" },
+    "registrationDate": "2026-05-16",
+    "payment": {
+      "id": 13,
+      "totalAmount": 80.0,
+      "paidAmount": 80.0,
+      "remainingAmount": 0.0,
+      "installmentCount": 1,
+      "completedInstallments": 1,
+      "remainingInstallments": 0,
+      "paymentType": "SINGLE_PAYMENT"
+    }
+  },
+  {
+    "id": 14,
+    "child": { "id": 109, "firstName": "Zoe", "lastName": "Lefebvre" },
+    "timeSlot": { "id": 4, "subject": "SVT", "schedule": "2026-05-19T15:30:00" },
+    "registrationDate": "2026-05-16",
+    "payment": {
+      "id": 14,
+      "totalAmount": 100.0,
+      "paidAmount": 50.0,
+      "remainingAmount": 50.0,
+      "installmentCount": 2,
+      "completedInstallments": 1,
+      "remainingInstallments": 1,
+      "paymentType": "SPLIT_PAYMENT"
+    }
+  },
+  {
+    "id": 15,
+    "child": { "id": 111, "firstName": "Inès", "lastName": "Garcia" },
+    "timeSlot": { "id": 6, "subject": "Histoire", "schedule": "2026-05-21T14:00:00" },
+    "registrationDate": "2026-05-16",
+    "payment": {
+      "id": 15,
+      "totalAmount": 90.0,
+      "paidAmount": 90.0,
+      "remainingAmount": 0.0,
+      "installmentCount": 1,
+      "completedInstallments": 1,
+      "remainingInstallments": 0,
+      "paymentType": "SINGLE_PAYMENT"
+    }
+  },
+  {
+    "id": 16,
+    "child": { "id": 113, "firstName": "Clara", "lastName": "Bonnet" },
+    "timeSlot": { "id": 7, "subject": "Français", "schedule": "2026-05-22T08:30:00" },
+    "registrationDate": "2026-05-17",
+    "payment": {
+      "id": 16,
+      "totalAmount": 110.0,
+      "paidAmount": 55.0,
+      "remainingAmount": 55.0,
+      "installmentCount": 2,
+      "completedInstallments": 1,
+      "remainingInstallments": 1,
+      "paymentType": "SPLIT_PAYMENT"
+    }
+  },
+  {
+    "id": 17,
+    "child": { "id": 116, "firstName": "Mila", "lastName": "Guerin" },
+    "timeSlot": { "id": 8, "subject": "EPS", "schedule": "2026-05-22T14:00:00" },
+    "registrationDate": "2026-05-17",
+    "payment": {
+      "id": 17,
+      "totalAmount": 50.0,
+      "paidAmount": 50.0,
+      "remainingAmount": 0.0,
+      "installmentCount": 1,
+      "completedInstallments": 1,
+      "remainingInstallments": 0,
+      "paymentType": "SINGLE_PAYMENT"
+    }
+  },
+  {
+    "id": 18,
+    "child": { "id": 102, "firstName": "Léa", "lastName": "Dupont" },
+    "timeSlot": { "id": 8, "subject": "EPS", "schedule": "2026-05-22T14:00:00" },
+    "registrationDate": "2026-05-17",
+    "payment": {
+      "id": 18,
+      "totalAmount": 50.0,
+      "paidAmount": 25.0,
+      "remainingAmount": 25.0,
+      "installmentCount": 2,
+      "completedInstallments": 1,
+      "remainingInstallments": 1,
+      "paymentType": "SPLIT_PAYMENT"
+    }
+  },
+  {
+    "id": 19,
+    "child": { "id": 124, "firstName": "Noé", "lastName": "Roux" },
+    "timeSlot": { "id": 1, "subject": "Mathématiques", "schedule": "2026-05-18T08:30:00" },
+    "registrationDate": "2026-05-18",
+    "payment": {
+      "id": 19,
+      "totalAmount": 100.0,
+      "paidAmount": 100.0,
+      "remainingAmount": 0.0,
+      "installmentCount": 1,
+      "completedInstallments": 1,
+      "remainingInstallments": 0,
+      "paymentType": "SINGLE_PAYMENT"
+    }
+  },
+  {
+    "id": 20,
+    "child": { "id": 121, "firstName": "Mila", "lastName": "Guerin" },
+    "timeSlot": { "id": 2, "subject": "Physique-Chimie", "schedule": "2026-05-18T10:30:00" },
+    "registrationDate": "2026-05-18",
+    "payment": {
+      "id": 20,
+      "totalAmount": 120.0,
+      "paidAmount": 0.0,
+      "remainingAmount": 120.0,
+      "installmentCount": 3,
+      "completedInstallments": 0,
+      "remainingInstallments": 3,
+      "paymentType": "SPLIT_PAYMENT"
+    }
+  }
+]
