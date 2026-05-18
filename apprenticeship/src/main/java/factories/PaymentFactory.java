@@ -1,9 +1,9 @@
-package main.java.factories;
+package factories;
 
-import main.java.enums.PaymentType;
-import main.java.interfaces.PaymentStrategy;
-import main.java.strategies.SinglePayment;
-import main.java.strategies.SplitPayment;
+import enums.PaymentType;
+import interfaces.PaymentStrategy;
+import strategies.SinglePayment;
+import strategies.SplitPayment;
 
 public class PaymentFactory {
 
@@ -28,3 +28,4 @@ public class PaymentFactory {
         }
     }
 }
+

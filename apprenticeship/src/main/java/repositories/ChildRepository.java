@@ -1,26 +1,28 @@
-package main.java.repositories;
+package repositories;
 
-import main.java.Models.Child;
+import Models.Child;
+import com.fasterxml.jackson.core.type.TypeReference;
+import singleton.AppConfig;
 
-import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
-public class ChildRepository {
-
-    private List<Child> children;
+public class ChildRepository extends BaseRepository<Child> {
 
     public ChildRepository() {
-
-        children = new ArrayList<>();
+        super(
+            AppConfig.getInstance().getChildrenFilePath(),
+            new TypeReference<List<Child>>() {}
+        );
     }
 
-    public void save(Child child) {
-
-        children.add(child);
-    }
-
-    public List<Child> findAll() {
-
-        return children;
+    /**
+     * Retourne tous les enfants appartenant à un parent donné.
+     * Utilise le champ parentId ajouté dans Child.
+     */
+    public List<Child> findByParentId(int parentId) {
+        return items.stream()
+            .filter(c -> c.getParentId() == parentId)
+            .collect(Collectors.toList());
     }
 }

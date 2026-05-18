@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<!-- CORRECTION CRITIQUE : Ajout des fx:id manquants pour les ListViews.
+     Sans eux, childrenListView, registrationsListView et notificationsListView
+     étaient null dans le contrôleur → showChildren() ne faisait rien. -->
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="ui.controllers.DashboardParentController"
+            style="-fx-background-color: #f9fafb;">
+
+    <!-- ═══ EN-TÊTE ═══ -->
+    <top>
+        <HBox spacing="20" alignment="CENTER_LEFT"
+              style="-fx-padding: 15 20; -fx-background-color: #1e3a8a;">
+            <Label fx:id="welcomeLabel"
+                   style="-fx-text-fill: white; -fx-font-size: 20; -fx-font-weight: bold;" />
+            <Region HBox.hgrow="ALWAYS" />
+            <Button text="⬅ Déconnexion"
+                    onAction="#logout"
+                    style="-fx-background-color: #ef4444; -fx-text-fill: white;
+                           -fx-font-size: 13; -fx-padding: 8 15; -fx-background-radius: 5;" />
+        </HBox>
+    </top>
+
+    <!-- ═══ MENU GAUCHE ═══ -->
+    <left>
+        <VBox spacing="12"
+              style="-fx-padding: 20; -fx-background-color: #1f2937; -fx-min-width: 180;">
+
+            <Label text="NAVIGATION"
+                   style="-fx-text-fill: #9ca3af; -fx-font-size: 11; -fx-font-weight: bold;" />
+
+            <Button text="👶 Mes enfants"
+                    prefWidth="150"
+                    onAction="#showChildren"
+                    style="-fx-background-color: #2563eb; -fx-text-fill: white;
+                           -fx-font-size: 13; -fx-padding: 10; -fx-background-radius: 5;" />
+
+            <Button text="📋 Inscriptions"
+                    prefWidth="150"
+                    onAction="#showRegistrations"
+                    style="-fx-background-color: #2563eb; -fx-text-fill: white;
+                           -fx-font-size: 13; -fx-padding: 10; -fx-background-radius: 5;" />
+
+            <Button text="🔔 Notifications"
+                    prefWidth="150"
+                    onAction="#showNotifications"
+                    style="-fx-background-color: #2563eb; -fx-text-fill: white;
+                           -fx-font-size: 13; -fx-padding: 10; -fx-background-radius: 5;" />
+
+            <Separator style="-fx-background-color: #374151;" />
+
+            <Label text="ACTIONS"
+                   style="-fx-text-fill: #9ca3af; -fx-font-size: 11; -fx-font-weight: bold;" />
+
+            <Button text="✏️ Nouveau"
+                    prefWidth="150"
+                    onAction="#openRegistration"
+                    style="-fx-background-color: #10b981; -fx-text-fill: white;
+                           -fx-font-size: 13; -fx-padding: 10; -fx-background-radius: 5;" />
+
+            <Button text="💳 Paiements"
+                    prefWidth="150"
+                    onAction="#openPayment"
+                    style="-fx-background-color: #f59e0b; -fx-text-fill: white;
+                           -fx-font-size: 13; -fx-padding: 10; -fx-background-radius: 5;" />
+        </VBox>
+    </left>
+
+    <!-- ═══ ZONE CENTRALE ═══ -->
+    <center>
+        <VBox spacing="20" style="-fx-padding: 25;">
+
+            <!-- Barre d'info -->
+            <HBox>
+                <Label fx:id="infoLabel"
+                       text="Bienvenue ! Utilisez le menu à gauche pour naviguer."
+                       style="-fx-font-size: 14; -fx-text-fill: #6b7280; -fx-font-style: italic;" />
+            </HBox>
+
+            <!-- Carte : Mes enfants -->
+            <VBox spacing="8"
+                  style="-fx-background-color: white; -fx-padding: 20;
+                         -fx-background-radius: 8; -fx-border-color: #e5e7eb; -fx-border-width: 1;
+                         -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 8, 0, 0, 2);">
+                <Label text="👶 Mes enfants"
+                       style="-fx-font-size: 16; -fx-font-weight: bold; -fx-text-fill: #1e3a8a;" />
+                <ListView fx:id="childrenListView" prefHeight="130"
+                          style="-fx-background-color: #f9fafb; -fx-border-color: #e5e7eb; -fx-border-radius: 4;" />
+            </VBox>
+
+            <!-- Carte : Mes inscriptions -->
+            <VBox spacing="8"
+                  style="-fx-background-color: white; -fx-padding: 20;
+                         -fx-background-radius: 8; -fx-border-color: #e5e7eb; -fx-border-width: 1;
+                         -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 8, 0, 0, 2);">
+                <Label text="📋 Mes inscriptions"
+                       style="-fx-font-size: 16; -fx-font-weight: bold; -fx-text-fill: #1e3a8a;" />
+                <ListView fx:id="registrationsListView" prefHeight="130"
+                          style="-fx-background-color: #f9fafb; -fx-border-color: #e5e7eb; -fx-border-radius: 4;" />
+            </VBox>
+
+            <!-- Carte : Notifications -->
+            <VBox spacing="8"
+                  style="-fx-background-color: white; -fx-padding: 20;
+                         -fx-background-radius: 8; -fx-border-color: #e5e7eb; -fx-border-width: 1;
+                         -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 8, 0, 0, 2);">
+                <Label text="🔔 Notifications"
+                       style="-fx-font-size: 16; -fx-font-weight: bold; -fx-text-fill: #1e3a8a;" />
+                <ListView fx:id="notificationsListView" prefHeight="100"
+                          style="-fx-background-color: #f9fafb; -fx-border-color: #e5e7eb; -fx-border-radius: 4;" />
+            </VBox>
+
+        </VBox>
+    </center>
+
+</BorderPane>

@@ -1,9 +1,10 @@
-package main.java.interfaces;
+package interfaces;
 
-import main.java.Models.TimeSlot;
-import main.java.exceptions.CapacityException;
+import Models.TimeSlot;
+import exceptions.CapacityException;
 
 public interface ITimeSlotState {
 
     void register(TimeSlot timeSlot) throws CapacityException;
 }
+

@@ -1,4 +1,4 @@
-package main.java.Models;
+package Models;
 
 public abstract class User {
 
@@ -72,3 +72,5 @@ public abstract class User {
         this.password = password;
     }
 }
+
+

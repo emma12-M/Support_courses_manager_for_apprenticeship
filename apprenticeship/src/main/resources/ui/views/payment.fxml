@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<!-- CORRECTION COMPLÈTE : Refonte de payment.fxml.
+     Avant : un simple TextField "montant" sans lien avec les vraies données.
+     Après : affiche les inscriptions du parent, infos de paiement, et
+     permet d'effectuer un versement qui est persisté dans payment.json. -->
+<VBox spacing="18"
+      alignment="TOP_CENTER"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="ui.controllers.PaymentController"
+      style="-fx-padding: 30; -fx-background-color: #f0f4f8;">
+
+    <Label fx:id="titleLabel"
+           text="💳 Gestion des paiements"
+           style="-fx-font-size: 20; -fx-font-weight: bold; -fx-text-fill: #2c3e50;" />
+
+    <Separator />
+
+    <!-- Sélection de l'inscription -->
+    <VBox spacing="5">
+        <Label text="Sélectionnez une inscription :"
+               style="-fx-font-size: 13; -fx-font-weight: bold; -fx-text-fill: #34495e;" />
+        <ComboBox fx:id="registrationComboBox" prefWidth="480"
+                  promptText="Choisissez une inscription..."
+                  style="-fx-padding: 4;" />
+    </VBox>
+
+    <!-- Informations de paiement -->
+    <VBox spacing="8"
+          style="-fx-background-color: white; -fx-padding: 15;
+                 -fx-background-radius: 7; -fx-effect: dropshadow(gaussian,rgba(0,0,0,0.08),6,0,0,2);">
+        <Label text="Informations de paiement"
+               style="-fx-font-size: 14; -fx-font-weight: bold; -fx-text-fill: #2c3e50;" />
+        <Label fx:id="paymentInfoLabel" style="-fx-font-size: 13; -fx-text-fill: #555;" />
+        <Label fx:id="totalLabel" style="-fx-font-size: 13; -fx-text-fill: #2c3e50;" />
+        <Label fx:id="paidLabel" style="-fx-font-size: 13; -fx-text-fill: #27ae60; -fx-font-weight: bold;" />
+        <Label fx:id="remainingLabel" style="-fx-font-size: 13; -fx-text-fill: #e74c3c; -fx-font-weight: bold;" />
+    </VBox>
+
+    <!-- Boutons -->
+    <HBox spacing="15" alignment="CENTER">
+        <Button fx:id="payButton"
+                text="💳 Effectuer le versement suivant"
+                onAction="#handlePayment"
+                style="-fx-background-color: #e67e22; -fx-text-fill: white;
+                       -fx-font-size: 14; -fx-font-weight: bold; -fx-padding: 10 25;
+                       -fx-background-radius: 6;" />
+        <Button fx:id="closeButton"
+                text="✕ Fermer"
+                onAction="#handleClose"
+                style="-fx-background-color: #95a5a6; -fx-text-fill: white;
+                       -fx-font-size: 14; -fx-padding: 10 25; -fx-background-radius: 6;" />
+    </HBox>
+
+    <!-- Message de résultat -->
+    <Label fx:id="statusLabel"
+           style="-fx-font-size: 13; -fx-font-weight: bold;"
+           wrapText="true" maxWidth="480" />
+
+</VBox>

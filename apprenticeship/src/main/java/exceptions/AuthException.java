@@ -1,4 +1,4 @@
-package main.java.exceptions;
+package exceptions;
 
 public class AuthException extends Exception{
 
@@ -6,3 +6,4 @@ public class AuthException extends Exception{
 		super(message);
 	}
 }
+

@@ -1,4 +1,4 @@
-package main.java.enums;
+package enums;
 
 public enum UserRole {
 
@@ -6,3 +6,4 @@ public enum UserRole {
 
     ADMINISTRATOR
 }
+
