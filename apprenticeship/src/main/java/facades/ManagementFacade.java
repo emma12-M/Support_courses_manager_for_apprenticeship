@@ -50,37 +50,26 @@ public class ManagementFacade {
      * @param payment   Le paiement (montant, type, versements)
      * @throws CapacityException si le créneau est complet
      */
-    public void completeRegistration(Parent parent, Child child,
-                                     TimeSlot timeSlot, Payment payment)
-            throws CapacityException {
+   public void completeRegistration(Parent parent, Child child,
+                                 TimeSlot timeSlot, Payment payment)
+        throws CapacityException {
 
-        // PATTERN OBSERVER :
-        // On s'assure de ne pas avoir d'anciens observateurs
-        notificationService.clearObservers();
+    // ÉTAPE 1 — Inscription
+    Registration registration = registrationService.registerChild(
+        child, timeSlot, payment, parent.getId()
+    );
 
-        // On abonne le parent avec son ID pour tracer la notification
-        notificationService.subscribeParent(
-            parent.getId(),
-            parent.getFirstName() + " " + parent.getLastName()
-        );
+    // ÉTAPE 2 — Traitement du paiement
+    double paidAmount = paymentService.processPayment(payment);
 
-        // ÉTAPE 1 — Inscription (PATTERN STATE via timeSlot.register())
-        Registration registration = registrationService.registerChild(
-            child, timeSlot, payment, parent.getId()
-        );
+    // ÉTAPE 3 — Notification ciblée au parent (SOLUTION B)
+    String msg = "Inscription de " + child.getFirstName() + " " + child.getLastName()
+        + " au créneau \"" + timeSlot.getSubject() + "\""
+        + " confirmée. Montant du premier versement : "
+        + String.format("%.2f", payment.getPaidAmount()) + " €";
 
-        // ÉTAPE 2 — Traitement du paiement (PATTERN STRATEGY via PaymentFactory)
-        double paidAmount = paymentService.processPayment(payment);
-        // Le paiement est maintenant sauvegardé en JSON par PaymentService
+    notificationService.notifyParent(parent.getId(), msg);  // ✅ Ciblé
 
-        // ÉTAPE 3 — Notification au parent (PATTERN OBSERVER)
-        String msg = "Inscription de " + child.getFirstName() + " " + child.getLastName()
-            + " au créneau \"" + timeSlot.getSubject() + "\""
-            + " confirmée. Montant du premier versement : "
-            + String.format("%.2f", payment.getPaidAmount()) + " €";
-
-        notificationService.notifyObservers(msg);
-
-        System.out.println("[ManagementFacade] Inscription complète effectuée.");
-    }
+    System.out.println("[ManagementFacade] Inscription complete effectuee.");
+}
 }
