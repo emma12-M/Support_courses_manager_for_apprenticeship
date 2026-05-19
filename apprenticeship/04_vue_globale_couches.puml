@@ -1,0 +1,137 @@
+@startuml Vue Globale
+
+title Vue Globale — Architecture en Couches\n(Gestion des Cours de Soutien)
+
+skinparam packageStyle rectangle
+skinparam shadowing false
+skinparam ArrowColor #495057
+skinparam NoteBackgroundColor #FFF3CD
+skinparam NoteBorderColor #FFC107
+
+skinparam package {
+    BackgroundColor #F8F9FA
+    BorderColor #495057
+    FontColor #212529
+    FontStyle bold
+}
+
+skinparam class {
+    BackgroundColor #F8F9FA
+    BorderColor #6C757D
+    HeaderBackgroundColor #495057
+    HeaderFontColor #FFFFFF
+}
+
+' ─────────────────────────────────────────
+'  COUCHE PRÉSENTATION (UI)
+' ─────────────────────────────────────────
+package "Couche Présentation (JavaFX UI)" #BBDEFB {
+    class LoginController
+    class DashboardParentController
+    class DashboardAdministratorController
+    class RegistrationController
+    class PaymentController
+}
+
+' ─────────────────────────────────────────
+'  COUCHE FAÇADE
+' ─────────────────────────────────────────
+package "Couche Façade <<Facade>>" #C8E6C9 {
+    class ManagementFacade
+}
+
+' ─────────────────────────────────────────
+'  COUCHE SERVICES
+' ─────────────────────────────────────────
+package "Couche Services" #FFF9C4 {
+    class AuthService
+    class RegistrationService
+    class PaymentService
+    class NotificationService
+    class TimeSlotService
+    class ChildService
+}
+
+' ─────────────────────────────────────────
+'  COUCHE PATRONS
+' ─────────────────────────────────────────
+package "Patrons de Conception" #F3E5F5 {
+    class "UserFactory\n<<Factory>>" as UF
+    class "PaymentFactory\n<<Factory>>" as PF
+    class "AppConfig\n<<Singleton>>" as AC
+    class "NotificationService\n<<Subject/Observer>>" as NO
+    class "AvailableState / FullState\n<<State>>" as ST
+    class "SinglePayment / SplitPayment\n<<Strategy>>" as SP
+}
+
+' ─────────────────────────────────────────
+'  COUCHE REPOSITORIES
+' ─────────────────────────────────────────
+package "Couche Repositories (Persistance JSON)" #FFE0B2 {
+    class ParentRepository
+    class AdministratorRepository
+    class ChildRepository
+    class TimeSlotRepository
+    class RegistrationRepository
+    class PaymentRepository
+    class NotificationRepository
+}
+
+' ─────────────────────────────────────────
+'  COUCHE MODÈLES
+' ─────────────────────────────────────────
+package "Couche Modèles (Domaine)" #F5F5F5 {
+    class User
+    class Parent
+    class Administrator
+    class Child
+    class TimeSlot
+    class Registration
+    class Payment
+    class Notification
+    class ClassRoom
+}
+
+' ─────────────────────────────────────────
+'  FLUX PRINCIPAL (couches)
+' ─────────────────────────────────────────
+LoginController             --> AuthService              : authentifie
+DashboardParentController   --> ManagementFacade         : completeRegistration()
+DashboardAdministratorController --> TimeSlotService     : gère créneaux
+RegistrationController      --> ManagementFacade         : inscription
+PaymentController           --> PaymentService           : versement
+
+ManagementFacade            --> RegistrationService
+ManagementFacade            --> PaymentService
+ManagementFacade            --> NotificationService
+
+RegistrationService         --> RegistrationRepository
+RegistrationService         --> TimeSlotRepository
+PaymentService              --> PaymentRepository
+NotificationService         --> NotificationRepository
+AuthService                 --> ParentRepository
+AuthService                 --> AdministratorRepository
+TimeSlotService             --> TimeSlotRepository
+ChildService                --> ChildRepository
+
+RegistrationService         ..> UF   : <<uses>>
+PaymentService              ..> PF   : <<uses>>
+RegistrationService         ..> ST   : <<State>>
+PaymentService              ..> SP   : <<Strategy>>
+NotificationService         ..> NO   : <<Observer>>
+
+ParentRepository            ..> AC   : getFilePath()
+ChildRepository             ..> AC   : getFilePath()
+RegistrationRepository      ..> AC   : getFilePath()
+PaymentRepository           ..> AC   : getFilePath()
+NotificationRepository      ..> AC   : getFilePath()
+
+ParentRepository            ..> Parent
+ChildRepository             ..> Child
+TimeSlotRepository          ..> TimeSlot
+RegistrationRepository      ..> Registration
+PaymentRepository           ..> Payment
+NotificationRepository      ..> Notification
+AdministratorRepository     ..> Administrator
+
+@enduml
