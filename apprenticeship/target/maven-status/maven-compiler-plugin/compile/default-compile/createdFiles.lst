@@ -1,4 +1,5 @@
 services\NotificationService.class
+utils\DataCleanupUtil$1.class
 exceptions\InvalidDataException.class
 factories\UserFactory$1.class
 repositories\PaymentRepository$1.class
@@ -12,6 +13,7 @@ repositories\AdministratorRepository$1.class
 factories\UserFactory.class
 factories\PaymentFactory.class
 strategies\SinglePayment.class
+utils\DataCleanupUtil$2.class
 Models\ClassRoom.class
 facades\ManagementFacade.class
 repositories\RegistrationRepository.class
@@ -39,6 +41,7 @@ repositories\TimeSlotRepository.class
 repositories\ParentRepository$1.class
 observers\ParentObserver.class
 interfaces\Observer.class
+utils\DataCleanupUtil.class
 interfaces\Subject.class
 repositories\AdministratorRepository.class
 services\AuthService.class
