@@ -21,6 +21,14 @@
     "level" : "CM2",
     "birthDate" : "2016-03-20"
   }, {
+<<<<<<< HEAD
+    "id" : 19464,
+    "parentId" : 1,
+    "firstName" : "papa",
+    "lastName" : "papa",
+    "age" : 0,
+    "level" : "papa",
+=======
     "id" : 70124,
     "parentId" : 1,
     "firstName" : "yves",
@@ -35,6 +43,7 @@
     "lastName" : "hjkzs",
     "age" : 0,
     "level" : "CE2",
+>>>>>>> 0f7ae29576c9066e7f47ef769bbf379a778baeaa
     "birthDate" : null
   } ]
 }, {

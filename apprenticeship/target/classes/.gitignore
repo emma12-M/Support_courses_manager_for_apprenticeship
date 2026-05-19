@@ -5,6 +5,7 @@
 /facades/
 /factories/
 /interfaces/
+/managers/
 /observers/
 /repositories/
 /services/
