@@ -208,4 +208,14 @@
   "remainingInstallments" : 3,
   "paymentType" : "SPLIT_PAYMENT",
   "completed" : false
+}, {
+  "id" : 44177,
+  "totalAmount" : 3000.0,
+  "paidAmount" : 500.0,
+  "remainingAmount" : 2500.0,
+  "installmentCount" : 6,
+  "completedInstallments" : 1,
+  "remainingInstallments" : 5,
+  "paymentType" : "SPLIT_PAYMENT",
+  "completed" : false
 } ]

@@ -14,23 +14,6 @@
     "remainingInstallments" : 0,
     "paymentType" : null,
     "completed" : false
-  },
-  "child" : {
-    "id" : 101,
-    "parentId" : 0,
-    "firstName" : "Lucas",
-    "lastName" : "Dupont",
-    "age" : 8,
-    "level" : "CE2",
-    "birthDate" : "2018-05-12"
-  },
-  "timeSlot" : {
-    "id" : 1,
-    "subject" : "Mathématiques",
-    "schedule" : "2026-05-18T08:30:00",
-    "classroom" : null,
-    "maxCapacity" : 0,
-    "registrationCount" : 0
   }
 }, {
   "id" : 2,
@@ -48,23 +31,6 @@
     "remainingInstallments" : 0,
     "paymentType" : null,
     "completed" : false
-  },
-  "child" : {
-    "id" : 103,
-    "parentId" : 0,
-    "firstName" : "Hugo",
-    "lastName" : "Leroy",
-    "age" : 6,
-    "level" : "CP",
-    "birthDate" : "2020-09-15"
-  },
-  "timeSlot" : {
-    "id" : 1,
-    "subject" : "Mathématiques",
-    "schedule" : "2026-05-18T08:30:00",
-    "classroom" : null,
-    "maxCapacity" : 0,
-    "registrationCount" : 0
   }
 }, {
   "id" : 3,
@@ -82,23 +48,6 @@
     "remainingInstallments" : 0,
     "paymentType" : null,
     "completed" : false
-  },
-  "child" : {
-    "id" : 105,
-    "parentId" : 0,
-    "firstName" : "Chloé",
-    "lastName" : "Petit",
-    "age" : 7,
-    "level" : "CE1",
-    "birthDate" : "2019-07-22"
-  },
-  "timeSlot" : {
-    "id" : 2,
-    "subject" : "Physique-Chimie",
-    "schedule" : "2026-05-18T10:30:00",
-    "classroom" : null,
-    "maxCapacity" : 0,
-    "registrationCount" : 0
   }
 }, {
   "id" : 4,
@@ -116,23 +65,6 @@
     "remainingInstallments" : 0,
     "paymentType" : null,
     "completed" : false
-  },
-  "child" : {
-    "id" : 108,
-    "parentId" : 0,
-    "firstName" : "Arthur",
-    "lastName" : "Dubois",
-    "age" : 14,
-    "level" : "3ème",
-    "birthDate" : "2012-06-30"
-  },
-  "timeSlot" : {
-    "id" : 3,
-    "subject" : "Anglais",
-    "schedule" : "2026-05-19T09:00:00",
-    "classroom" : null,
-    "maxCapacity" : 0,
-    "registrationCount" : 0
   }
 }, {
   "id" : 5,
@@ -150,23 +82,6 @@
     "remainingInstallments" : 0,
     "paymentType" : null,
     "completed" : false
-  },
-  "child" : {
-    "id" : 110,
-    "parentId" : 0,
-    "firstName" : "Gabriel",
-    "lastName" : "Michel",
-    "age" : 11,
-    "level" : "6ème",
-    "birthDate" : "2015-08-01"
-  },
-  "timeSlot" : {
-    "id" : 5,
-    "subject" : "Informatique",
-    "schedule" : "2026-05-21T09:00:00",
-    "classroom" : null,
-    "maxCapacity" : 0,
-    "registrationCount" : 0
   }
 }, {
   "id" : 6,
@@ -184,23 +99,6 @@
     "remainingInstallments" : 0,
     "paymentType" : null,
     "completed" : false
-  },
-  "child" : {
-    "id" : 112,
-    "parentId" : 0,
-    "firstName" : "Mathis",
-    "lastName" : "Martinez",
-    "age" : 15,
-    "level" : "Seconde",
-    "birthDate" : "2011-05-04"
-  },
-  "timeSlot" : {
-    "id" : 6,
-    "subject" : "Histoire",
-    "schedule" : "2026-05-21T14:00:00",
-    "classroom" : null,
-    "maxCapacity" : 0,
-    "registrationCount" : 0
   }
 }, {
   "id" : 7,
@@ -218,23 +116,6 @@
     "remainingInstallments" : 0,
     "paymentType" : null,
     "completed" : false
-  },
-  "child" : {
-    "id" : 114,
-    "parentId" : 0,
-    "firstName" : "Raphaël",
-    "lastName" : "Rousseau",
-    "age" : 16,
-    "level" : "Première",
-    "birthDate" : "2010-12-03"
-  },
-  "timeSlot" : {
-    "id" : 7,
-    "subject" : "Français",
-    "schedule" : "2026-05-22T08:30:00",
-    "classroom" : null,
-    "maxCapacity" : 0,
-    "registrationCount" : 0
   }
 }, {
   "id" : 8,
@@ -252,23 +133,6 @@
     "remainingInstallments" : 0,
     "paymentType" : null,
     "completed" : false
-  },
-  "child" : {
-    "id" : 116,
-    "parentId" : 0,
-    "firstName" : "Mila",
-    "lastName" : "Guerin",
-    "age" : 6,
-    "level" : "CP",
-    "birthDate" : "2020-04-09"
-  },
-  "timeSlot" : {
-    "id" : 8,
-    "subject" : "EPS",
-    "schedule" : "2026-05-22T14:00:00",
-    "classroom" : null,
-    "maxCapacity" : 0,
-    "registrationCount" : 0
   }
 }, {
   "id" : 9,
@@ -286,7 +150,22 @@
     "remainingInstallments" : 4,
     "paymentType" : "SPLIT_PAYMENT",
     "completed" : false
-  },
-  "child" : null,
-  "timeSlot" : null
+  }
+}, {
+  "id" : 10,
+  "childId" : 44097,
+  "timeSlotId" : 5,
+  "parentId" : 1,
+  "registrationDate" : "2026-05-19",
+  "payment" : {
+    "id" : 44177,
+    "totalAmount" : 3000.0,
+    "paidAmount" : 0.0,
+    "remainingAmount" : 3000.0,
+    "installmentCount" : 6,
+    "completedInstallments" : 0,
+    "remainingInstallments" : 6,
+    "paymentType" : "SPLIT_PAYMENT",
+    "completed" : false
+  }
 } ]
