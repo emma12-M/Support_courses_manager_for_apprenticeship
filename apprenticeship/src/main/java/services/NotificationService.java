@@ -43,24 +43,37 @@ public class NotificationService implements Subject {
         }
     }
 
-    /**
-     * Crée et enregistre un observateur pour un parent donné.
-     * Raccourci utilisé par ManagementFacade.
-     *
-     * @param parentId   L'ID du parent (pour la persistance)
-     * @param parentName Le nom complet du parent (pour les logs)
-     */
     public void subscribeParent(int parentId, String parentName) {
         ParentObserver observer = new ParentObserver(parentId, parentName);
         addObserver(observer);
     }
 
-    /**
-     * Réinitialise la liste des observateurs.
-     * Utile entre deux inscriptions pour ne pas notifier deux fois.
-     */
     public void clearObservers() {
         observers.clear();
     }
-}
 
+    /**
+     * ✅ NOUVEAU - Envoie une notification ciblée à UN parent
+     */
+    public void notifyParent(int parentId, String message) {
+        ParentObserver observer = new ParentObserver(parentId, "Parent #" + parentId);
+        observer.update(message);
+    }
+
+    /**
+     * ✅ NOUVEAU - Envoie une notification à plusieurs parents
+     */
+    public void notifyParents(List<Integer> parentIds, String message) {
+        for (int parentId : parentIds) {
+            notifyParent(parentId, message);
+        }
+    }
+
+    /**
+     * ✅ NOUVEAU - Envoie une notification à TOUS les parents abonnés
+     * (utilise le vieux pattern Observer, mais maintenant avec intention claire)
+     */
+    public void notifyAllSubscribedParents(String message) {
+        notifyObservers(message);
+    }
+}

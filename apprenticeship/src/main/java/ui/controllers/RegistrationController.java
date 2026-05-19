@@ -71,11 +71,19 @@ public class RegistrationController {
 
         // Affiche/cache le champ de versements selon le choix
         paymentTypeComboBox.setOnAction(e -> {
-            boolean isSplit = paymentTypeComboBox.getValue() != null
-                && paymentTypeComboBox.getValue().startsWith("Paiement fractionné");
-            if (installmentCountField != null) installmentCountField.setVisible(isSplit);
-            if (installmentLabel != null) installmentLabel.setVisible(isSplit);
-        });
+        boolean isSplit = paymentTypeComboBox.getValue() != null
+            && paymentTypeComboBox.getValue().startsWith("Paiement fractionné");
+        
+        if (installmentCountField != null) {
+            installmentCountField.setVisible(isSplit);
+            installmentCountField.setManaged(isSplit);  // 🔑 CLEF MANQUANTE !
+        }
+        
+        if (installmentLabel != null) {
+            installmentLabel.setVisible(isSplit);
+            installmentLabel.setManaged(isSplit);       // 🔑 CLEF MANQUANTE !
+        }
+    });
     }
 
     /**
