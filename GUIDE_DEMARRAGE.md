@@ -1,232 +1,168 @@
-# 🚀 GUIDE DE DÉMARRAGE RAPIDE
+# 📘 Support Courses Manager for Apprenticeship
 
-## 📦 Prérequis
+Application JavaFX permettant la gestion des inscriptions aux cours, des enfants et des paiements dans un contexte scolaire.
 
-- **Java**: OpenJDK 17+ (Adoptium JDK recommandé)
-- **Maven**: 3.9.15 ou plus
-- **JavaFX SDK**: 21 (configuré dans pom.xml)
+---
 
-Vérifier l'installation:
+## 1. 📦 Prérequis
+
+Avant d’exécuter l’application, assurez-vous d’avoir installé :
+
+- **Java JDK** : version 17 ou supérieure (OpenJDK recommandé)
+- **Apache Maven** : version 3.9.15 ou supérieure
+- **JavaFX SDK** : version 21 (configuré via Maven)
+
+### 🔍 Vérification
+
 ```bash
 java -version
 mvn -version
 ```
 
 ---
-
-## 🎯 DÉMARRAGE DE L'APPLICATION
-
-### Option 1: Via Maven (Recommandé)
-
-```bash
-cd c:\projetPro\Support_courses_manager_for_apprenticeship\apprenticeship
-
-# Compiler et lancer
+🚀 Lancement de l’application
+▶️ Méthode 1 : Maven (recommandée)
+Shell : cd C:\projetPro\Support_courses_manager_for_apprenticeship\apprenticeship
 mvn clean javafx:run
-```
 
-### Option 2: Via JAR Exécutable
+▶️ Méthode 2 : JAR exécutable
+Shell : mvn clean package -DskipTests
 
-```bash
-cd c:\projetPro\Support_courses_manager_for_apprenticeship\apprenticeship
+Puis :
 
-# Compiler et packager
-mvn clean package -DskipTests
+Shell : java -module-path "C:\chemin\vers\javafx-sdk-21\lib" ^    
+--add-modules 
+javafx.controls,javafx.fxml,javafx.graphics ^     -jar target/apprenticeship-1.0.jar
 
-# Lancer le JAR
-java -module-path "C:\chemin\vers\javafx-sdk-21\lib" \
-     --add-modules javafx.controls,javafx.fxml,javafx.graphics \
-     -jar target/apprenticeship-1.0.jar
-```
+``
 
----
+3. 🔐 Comptes de test
+👨‍👩‍👧 Parent
 
-## 🔐 Comptes de Test
+Email : jean.dupont@email.com
+Mot de passe : hashed_password_1
 
-### Pour Parent
-```
-Email:    emma@gmail.com
-Password: 1234
-```
+👨‍💼 Administrateur
 
-### Pour Administrateur
-```
-Email:    admin@ecole.fr
-Password: admin123
-```
+Email :robert.durand@admin.com
+Mot de passe : admin_secure_password_1
 
----
 
-## 📋 FLUX D'UTILISATION
+4. 📋 Fonctionnalités
+🔑 Authentification
 
-### 1️⃣ Connexion
-1. Lancer l'application
-2. Voir écran de login avec design moderne
-3. Entrer email + mot de passe
-4. Cliquer "Se connecter"
+Interface de connexion sécurisée
+Redirection vers un tableau de bord personnalisé
 
-### 2️⃣ Dashboard Parent
-1. Après connexion, voir liste:
-   - 👶 Mes enfants
-   - 📋 Mes inscriptions  
-   - 🔔 Notifications
-2. Menu latéral avec actions:
-   - ✏️ Nouveau (inscrire enfant)
-   - 💳 Paiements
 
-### 3️⃣ Inscrire un Enfant
-1. Cliquer "Nouveau"
-2. Remplir formulaire:
-   - Prénom de l'enfant
-   - Nom de l'enfant
-   - Niveau scolaire (optionnel)
-   - Sélectionner créneau
-3. Section Paiement:
-   - Choisir mode (Paiement unique / Fractionné)
-   - Montant total
-   - *(Si fractionné)* Nombre de versements
-4. Cliquer "Inscrire"
-5. Confirmation + données sauvegardées
+📊 Tableau de bord parent
 
-### 4️⃣ Vérifier Persistance
-Les données sont automatiquement sauvegardées dans:
-```
+Liste des enfants
+Inscriptions aux cours
+Notifications
+
+
+➕ Inscription d’un enfant
+
+Ajout d’un enfant
+Choix du niveau scolaire
+Sélection d’un créneau
+Gestion du paiement :
+
+Paiement unique
+Paiement fractionné
+
+
+
+
+💾 Persistance des données
+Les données sont stockées au format JSON dans :
 src/main/resources/data/
-├── children.json          (enfants)
-├── parents.json           (parents + enfants)
-├── registration.json      (inscriptions)
-└── payment.json           (paiements)
-```
 
----
+Fichiers :
 
-## 🎨 DESIGN & INTERFACE
+children.json → enfants
+parents.json → parents
+registration.json → inscriptions
+payment.json → paiements
 
-### Couleurs
-- **Primary** (Bleu): #1e3a8a
-- **Success** (Vert): #10b981
-- **Warning** (Orange): #f59e0b
-- **Danger** (Rouge): #ef4444
 
-### Composants
-- Formulaires avec validation
-- Listes interactives
-- Boutons réactifs au survol
-- Design card moderne
-- Navigation intuitive
+5. 🎨 Interface utilisateur
+🎨 Couleurs principales
 
----
+Bleu : #1e3a8a
+Vert : #10b981
+Orange : #f59e0b
+Rouge : #ef4444
 
-## 🔍 VÉRIFICATIONS
+🧩 Composants
 
-### Compilation
-```bash
-cd apprenticeship
-mvn clean compile
-# Résultat attendu: BUILD SUCCESS
-```
+Formulaires dynamiques
+Validation utilisateur
+Cartes (cards)
+Navigation latérale
+Interface responsive
 
-### Tests
-```bash
-mvn test
-# Tous les tests doivent passer
-```
 
-### Package
-```bash
-mvn clean package
-# Résultat: target/apprenticeship-1.0.jar créé
-```
+6. ✅ Vérifications
+✔️ Compilation
+Shell : mvn clean compile
 
----
+✔️ Tests
+Shell : mvn test
 
-## 🐛 DÉPANNAGE
+✔️ Packaging
+Shell : mvn clean package
 
-### Problème: "JavaFX runtime components are missing"
-**Solution**: 
-```bash
-# Ajouter --add-modules au lancement:
-mvn clean javafx:run
+7. 🐛 Dépannage
+❌ JavaFX manquant
+Shell : mvn clean javafx:run
 
-# Ou si JAR:
-java -module-path "./lib" --add-modules javafx.controls,javafx.fxml -jar apprenticeship-1.0.jar
-```
+❌ Erreur compilation
+Shell : mvn clean compile
 
-### Problème: "Cannot find symbol" lors de compilation
-**Solution**: 
-```bash
-# Nettoyer et reconstruire:
-mvn clean compile
+❌ Données non sauvegardées
 
-# Ou vérifier les imports dans les fichiers .java
-```
+Vérifier le dossier data
+Vérifier les permissions
+Consulter les logs
 
-### Problème: Données non persistées
-**Solution**:
-- Vérifier que `src/main/resources/data/` existe
-- Vérifier les permissions d'écriture du dossier
-- Consulter les logs lors du lancement
 
-### Problème: Login échoue
-**Solution**:
-- Vérifier credentials (voir section comptes de test)
-- Vérifier que `administrator.json` et `parents.json` existent
-- Consulter la console pour les messages d'erreur
+❌ Problème de connexion
 
----
+Vérifier les identifiants
+Vérifier les fichiers JSON
+Consulter la console
 
-## 📊 STRUCTURE DU PROJET
 
-```
+8. 📁 Structure du projet
 apprenticeship/
 ├── src/main/
-│   ├── java/
-│   │   └── (Controllers, Services, Models, Repositories)
+│   ├── java/              → logique métier (MVC)
 │   └── resources/
 │       ├── config/
-│       │   └── app.properties
 │       ├── data/
-│       │   └── (JSON files)
 │       ├── images/
 │       └── ui/
-│           └── (FXML files)
 ├── target/
-│   └── apprenticeship-1.0.jar
 ├── pom.xml
 └── README.md
-```
+
+
+9. ✅ Checklist
+
+ Compilation sans erreurs
+ Authentification fonctionnelle
+ Ajout d’enfants opérationnel
+ Persistance JSON valide
+ Tableau de bord fonctionnel
+ Gestion des paiements opérationnelle
+
+
+10. 📌 Conclusion
+Cette application constitue une solution pédagogique permettant de gérer les inscriptions aux cours et les paiements associés. Elle repose sur une architecture simple avec JavaFX et une persistance en JSON adaptée à un projet académique.
+
+👨‍💻 Auteur
+Projet réalisé dans le cadre d’un apprentissage en développement logiciel.
 
 ---
-
-## 📚 DOCUMENTATION SUPPLÉMENTAIRE
-
-- **Rapport Complet**: `RAPPORT_FINAL.md`
-- **Tests de Validation**: `TEST_VALIDATION.md`
-- **Architecture**: `EcoleProjet.md`
-
----
-
-## ✅ CHECKLIST AVANT DÉPLOIEMENT
-
-- [ ] Application compile sans erreurs
-- [ ] Comptes de test fonctionnent
-- [ ] Inscription d'enfant fonctionne
-- [ ] Données persistées dans JSON
-- [ ] Dashboard affiche les données
-- [ ] Paiements enregistrés correctement
-- [ ] Notifications reçues
-
----
-
-## 📞 SUPPORT
-
-Pour toute question ou problème:
-1. Consulter les fichiers de documentation
-2. Vérifier les logs de l'application
-3. Reconstruire avec `mvn clean build`
-4. Vérifier que tous les prérequis sont installés
-
----
-
-**Bonne utilisation ! 🎉**
-
