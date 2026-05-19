@@ -74,7 +74,8 @@ public class DashboardParentController {
     public void showChildren() {
         if (currentUser == null) return;
 
-        List<Child> children = childService.getChildrenByParentId(currentUser.getId());
+         List<Child> children = currentUser.getChildren();  // Utiliser le parent
+         // affiche les enfants ✅
 
         if (childrenListView != null) {
             childrenListView.getItems().clear();
