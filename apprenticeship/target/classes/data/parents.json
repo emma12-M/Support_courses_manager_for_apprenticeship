@@ -1,322 +1,301 @@
-[
-  {
-    "id": 1,
-    "firstName": "Jean",
-    "lastName": "Dupont",
-    "email": "jean.dupont@email.com",
-    "password": "hashed_password_1",
-    "children": [
-      {
-        "id": 101,
-        "firstName": "Lucas",
-        "lastName": "Dupont",
-        "age": 8,
-        "level": "CE2",
-        "birthDate": "2018-05-12"
-      },
-      {
-        "id": 102,
-        "firstName": "Léa",
-        "lastName": "Dupont",
-        "age": 10,
-        "level": "CM2",
-        "birthDate": "2016-03-20"
-      }
-    ]
-  },
-  {
-    "id": 2,
-    "firstName": "Marie",
-    "lastName": "Leroy",
-    "email": "marie.leroy@email.com",
-    "password": "hashed_password_2",
-    "children": [
-      {
-        "id": 103,
-        "firstName": "Hugo",
-        "lastName": "Leroy",
-        "age": 6,
-        "level": "CP",
-        "birthDate": "2020-09-15"
-      }
-    ]
-  },
-  {
-    "id": 3,
-    "firstName": "Thomas",
-    "lastName": "Moreau",
-    "email": "t.moreau@email.com",
-    "password": "hashed_password_3",
-    "children": []
-  },
-  {
-    "id": 4,
-    "firstName": "Julie",
-    "lastName": "Bernard",
-    "email": "j.bernard@email.com",
-    "password": "hashed_password_4",
-    "children": [
-      {
-        "id": 104,
-        "firstName": "Emma",
-        "lastName": "Bernard",
-        "age": 12,
-        "level": "5ème",
-        "birthDate": "2014-01-10"
-      }
-    ]
-  },
-  {
-    "id": 5,
-    "firstName": "Nicolas",
-    "lastName": "Petit",
-    "email": "nicolas.petit@email.com",
-    "password": "hashed_password_5",
-    "children": [
-      {
-        "id": 105,
-        "firstName": "Chloé",
-        "lastName": "Petit",
-        "age": 7,
-        "level": "CE1",
-        "birthDate": "2019-07-22"
-      }
-    ]
-  },
-  {
-    "id": 6,
-    "firstName": "Sophie",
-    "lastName": "Richard",
-    "email": "sophie.r@email.com",
-    "password": "hashed_password_6",
-    "children": [
-      {
-        "id": 106,
-        "firstName": "Enzo",
-        "lastName": "Richard",
-        "age": 9,
-        "level": "CM1",
-        "birthDate": "2017-11-05"
-      },
-      {
-        "id": 107,
-        "firstName": "Manon",
-        "lastName": "Richard",
-        "age": 5,
-        "level": "Grande Section",
-        "birthDate": "2021-02-14"
-      }
-    ]
-  },
-  {
-    "id": 7,
-    "firstName": "Pierre",
-    "lastName": "Durand",
-    "email": "p.durand@email.com",
-    "password": "hashed_password_7",
-    "children": []
-  },
-  {
-    "id": 8,
-    "firstName": "Claire",
-    "lastName": "Dubois",
-    "email": "claire.dubois@email.com",
-    "password": "hashed_password_8",
-    "children": [
-      {
-        "id": 108,
-        "firstName": "Arthur",
-        "lastName": "Dubois",
-        "age": 14,
-        "level": "3ème",
-        "birthDate": "2012-06-30"
-      }
-    ]
-  },
-  {
-    "id": 9,
-    "firstName": "Benoît",
-    "lastName": "Lefebvre",
-    "email": "b.lefebvre@email.com",
-    "password": "hashed_password_9",
-    "children": [
-      {
-        "id": 109,
-        "firstName": "Zoe",
-        "lastName": "Lefebvre",
-        "age": 4,
-        "level": "Moyenne Section",
-        "birthDate": "2022-04-18"
-      }
-    ]
-  },
-  {
-    "id": 10,
-    "firstName": "Hélène",
-    "lastName": "Michel",
-    "email": "h.michel@email.com",
-    "password": "hashed_password_10",
-    "children": [
-      {
-        "id": 110,
-        "firstName": "Gabriel",
-        "lastName": "Michel",
-        "age": 11,
-        "level": "6ème",
-        "birthDate": "2015-08-01"
-      }
-    ]
-  },
-  {
-    "id": 11,
-    "firstName": "David",
-    "lastName": "Garcia",
-    "email": "d.garcia@email.com",
-    "password": "hashed_password_11",
-    "children": [
-      {
-        "id": 111,
-        "firstName": "Inès",
-        "lastName": "Garcia",
-        "age": 13,
-        "level": "4ème",
-        "birthDate": "2013-10-11"
-      }
-    ]
-  },
-  {
-    "id": 12,
-    "firstName": "Sandrine",
-    "lastName": "Martinez",
-    "email": "s.martinez@email.com",
-    "password": "hashed_password_12",
-    "children": [
-      {
-        "id": 112,
-        "firstName": "Mathis",
-        "lastName": "Martinez",
-        "age": 15,
-        "level": "Seconde",
-        "birthDate": "2011-05-04"
-      }
-    ]
-  },
-  {
-    "id": 13,
-    "firstName": "Olivier",
-    "lastName": "Lambert",
-    "email": "o.lambert@email.com",
-    "password": "hashed_password_13",
-    "children": []
-  },
-  {
-    "id": 14,
-    "firstName": "Isabelle",
-    "lastName": "Bonnet",
-    "email": "i.bonnet@email.com",
-    "password": "hashed_password_14",
-    "children": [
-      {
-        "id": 113,
-        "firstName": "Clara",
-        "lastName": "Bonnet",
-        "age": 3,
-        "level": "Petite Section",
-        "birthDate": "2023-01-15"
-      }
-    ]
-  },
-  {
-    "id": 15,
-    "firstName": "Guillaume",
-    "lastName": "Rousseau",
-    "email": "g.rousseau@email.com",
-    "password": "hashed_password_15",
-    "children": [
-      {
-        "id": 114,
-        "firstName": "Raphaël",
-        "lastName": "Rousseau",
-        "age": 16,
-        "level": "Première",
-        "birthDate": "2010-12-03"
-      }
-    ]
-  },
-  {
-    "id": 16,
-    "firstName": "Émilie",
-    "lastName": "Blanc",
-    "email": "e.blanc@email.com",
-    "password": "hashed_password_16",
-    "children": [
-      {
-        "id": 115,
-        "firstName": "Théo",
-        "lastName": "Blanc",
-        "age": 17,
-        "level": "Terminale",
-        "birthDate": "2009-08-27"
-      }
-    ]
-  },
-  {
-    "id": 17,
-    "firstName": "Antoine",
-    "lastName": "Guerin",
-    "email": "a.guerin@email.com",
-    "password": "hashed_password_17",
-    "children": [
-      {
-        "id": 116,
-        "firstName": "Mila",
-        "lastName": "Guerin",
-        "age": 6,
-        "level": "CP",
-        "birthDate": "2020-04-09"
-      }
-    ]
-  },
-  {
-    "id": 18,
-    "firstName": "Céline",
-    "lastName": "Muller",
-    "email": "c.muller@email.com",
-    "password": "hashed_password_18",
-    "children": [
-      {
-        "id": 117,
-        "firstName": "Jules",
-        "lastName": "Muller",
-        "age": 9,
-        "level": "CM1",
-        "birthDate": "2017-02-19"
-      }
-    ]
-  },
-  {
-    "id": 19,
-    "firstName": "Fabrice",
-    "lastName": "Fontaine",
-    "email": "f.fontaine@email.com",
-    "password": "hashed_password_19",
-    "children": []
-  },
-  {
-    "id": 20,
-    "firstName": "Valérie",
-    "lastName": "Roux",
-    "email": "v.roux@email.com",
-    "password": "hashed_password_20",
-    "children": [
-      {
-        "id": 118,
-        "firstName": "Noé",
-        "lastName": "Roux",
-        "age": 10,
-        "level": "CM2",
-        "birthDate": "2016-11-11"
-      }
-    ]
-  }
-]
+[ {
+  "id" : 1,
+  "firstName" : "Jean",
+  "lastName" : "Dupont",
+  "email" : "jean.dupont@email.com",
+  "password" : "hashed_password_1",
+  "children" : [ {
+    "id" : 101,
+    "parentId" : 0,
+    "firstName" : "Lucas",
+    "lastName" : "Dupont",
+    "age" : 8,
+    "level" : "CE2",
+    "birthDate" : "2018-05-12"
+  }, {
+    "id" : 102,
+    "parentId" : 0,
+    "firstName" : "Léa",
+    "lastName" : "Dupont",
+    "age" : 10,
+    "level" : "CM2",
+    "birthDate" : "2016-03-20"
+  }, {
+    "id" : 70124,
+    "parentId" : 1,
+    "firstName" : "yves",
+    "lastName" : "Jean Faustin",
+    "age" : 0,
+    "level" : "CE2",
+    "birthDate" : null
+  }, {
+    "id" : 44097,
+    "parentId" : 1,
+    "firstName" : "ajsega",
+    "lastName" : "hjkzs",
+    "age" : 0,
+    "level" : "CE2",
+    "birthDate" : null
+  } ]
+}, {
+  "id" : 2,
+  "firstName" : "Marie",
+  "lastName" : "Leroy",
+  "email" : "marie.leroy@email.com",
+  "password" : "hashed_password_2",
+  "children" : [ {
+    "id" : 103,
+    "parentId" : 0,
+    "firstName" : "Hugo",
+    "lastName" : "Leroy",
+    "age" : 6,
+    "level" : "CP",
+    "birthDate" : "2020-09-15"
+  } ]
+}, {
+  "id" : 3,
+  "firstName" : "Thomas",
+  "lastName" : "Moreau",
+  "email" : "t.moreau@email.com",
+  "password" : "hashed_password_3",
+  "children" : [ ]
+}, {
+  "id" : 4,
+  "firstName" : "Julie",
+  "lastName" : "Bernard",
+  "email" : "j.bernard@email.com",
+  "password" : "hashed_password_4",
+  "children" : [ {
+    "id" : 104,
+    "parentId" : 0,
+    "firstName" : "Emma",
+    "lastName" : "Bernard",
+    "age" : 12,
+    "level" : "5ème",
+    "birthDate" : "2014-01-10"
+  } ]
+}, {
+  "id" : 5,
+  "firstName" : "Nicolas",
+  "lastName" : "Petit",
+  "email" : "nicolas.petit@email.com",
+  "password" : "hashed_password_5",
+  "children" : [ {
+    "id" : 105,
+    "parentId" : 0,
+    "firstName" : "Chloé",
+    "lastName" : "Petit",
+    "age" : 7,
+    "level" : "CE1",
+    "birthDate" : "2019-07-22"
+  } ]
+}, {
+  "id" : 6,
+  "firstName" : "Sophie",
+  "lastName" : "Richard",
+  "email" : "sophie.r@email.com",
+  "password" : "hashed_password_6",
+  "children" : [ {
+    "id" : 106,
+    "parentId" : 0,
+    "firstName" : "Enzo",
+    "lastName" : "Richard",
+    "age" : 9,
+    "level" : "CM1",
+    "birthDate" : "2017-11-05"
+  }, {
+    "id" : 107,
+    "parentId" : 0,
+    "firstName" : "Manon",
+    "lastName" : "Richard",
+    "age" : 5,
+    "level" : "Grande Section",
+    "birthDate" : "2021-02-14"
+  } ]
+}, {
+  "id" : 7,
+  "firstName" : "Pierre",
+  "lastName" : "Durand",
+  "email" : "p.durand@email.com",
+  "password" : "hashed_password_7",
+  "children" : [ ]
+}, {
+  "id" : 8,
+  "firstName" : "Claire",
+  "lastName" : "Dubois",
+  "email" : "claire.dubois@email.com",
+  "password" : "hashed_password_8",
+  "children" : [ {
+    "id" : 108,
+    "parentId" : 0,
+    "firstName" : "Arthur",
+    "lastName" : "Dubois",
+    "age" : 14,
+    "level" : "3ème",
+    "birthDate" : "2012-06-30"
+  } ]
+}, {
+  "id" : 9,
+  "firstName" : "Benoît",
+  "lastName" : "Lefebvre",
+  "email" : "b.lefebvre@email.com",
+  "password" : "hashed_password_9",
+  "children" : [ {
+    "id" : 109,
+    "parentId" : 0,
+    "firstName" : "Zoe",
+    "lastName" : "Lefebvre",
+    "age" : 4,
+    "level" : "Moyenne Section",
+    "birthDate" : "2022-04-18"
+  } ]
+}, {
+  "id" : 10,
+  "firstName" : "Hélène",
+  "lastName" : "Michel",
+  "email" : "h.michel@email.com",
+  "password" : "hashed_password_10",
+  "children" : [ {
+    "id" : 110,
+    "parentId" : 0,
+    "firstName" : "Gabriel",
+    "lastName" : "Michel",
+    "age" : 11,
+    "level" : "6ème",
+    "birthDate" : "2015-08-01"
+  } ]
+}, {
+  "id" : 11,
+  "firstName" : "David",
+  "lastName" : "Garcia",
+  "email" : "d.garcia@email.com",
+  "password" : "hashed_password_11",
+  "children" : [ {
+    "id" : 111,
+    "parentId" : 0,
+    "firstName" : "Inès",
+    "lastName" : "Garcia",
+    "age" : 13,
+    "level" : "4ème",
+    "birthDate" : "2013-10-11"
+  } ]
+}, {
+  "id" : 12,
+  "firstName" : "Sandrine",
+  "lastName" : "Martinez",
+  "email" : "s.martinez@email.com",
+  "password" : "hashed_password_12",
+  "children" : [ {
+    "id" : 112,
+    "parentId" : 0,
+    "firstName" : "Mathis",
+    "lastName" : "Martinez",
+    "age" : 15,
+    "level" : "Seconde",
+    "birthDate" : "2011-05-04"
+  } ]
+}, {
+  "id" : 13,
+  "firstName" : "Olivier",
+  "lastName" : "Lambert",
+  "email" : "o.lambert@email.com",
+  "password" : "hashed_password_13",
+  "children" : [ ]
+}, {
+  "id" : 14,
+  "firstName" : "Isabelle",
+  "lastName" : "Bonnet",
+  "email" : "i.bonnet@email.com",
+  "password" : "hashed_password_14",
+  "children" : [ {
+    "id" : 113,
+    "parentId" : 0,
+    "firstName" : "Clara",
+    "lastName" : "Bonnet",
+    "age" : 3,
+    "level" : "Petite Section",
+    "birthDate" : "2023-01-15"
+  } ]
+}, {
+  "id" : 15,
+  "firstName" : "Guillaume",
+  "lastName" : "Rousseau",
+  "email" : "g.rousseau@email.com",
+  "password" : "hashed_password_15",
+  "children" : [ {
+    "id" : 114,
+    "parentId" : 0,
+    "firstName" : "Raphaël",
+    "lastName" : "Rousseau",
+    "age" : 16,
+    "level" : "Première",
+    "birthDate" : "2010-12-03"
+  } ]
+}, {
+  "id" : 16,
+  "firstName" : "Émilie",
+  "lastName" : "Blanc",
+  "email" : "e.blanc@email.com",
+  "password" : "hashed_password_16",
+  "children" : [ {
+    "id" : 115,
+    "parentId" : 0,
+    "firstName" : "Théo",
+    "lastName" : "Blanc",
+    "age" : 17,
+    "level" : "Terminale",
+    "birthDate" : "2009-08-27"
+  } ]
+}, {
+  "id" : 17,
+  "firstName" : "Antoine",
+  "lastName" : "Guerin",
+  "email" : "a.guerin@email.com",
+  "password" : "hashed_password_17",
+  "children" : [ {
+    "id" : 116,
+    "parentId" : 0,
+    "firstName" : "Mila",
+    "lastName" : "Guerin",
+    "age" : 6,
+    "level" : "CP",
+    "birthDate" : "2020-04-09"
+  } ]
+}, {
+  "id" : 18,
+  "firstName" : "Céline",
+  "lastName" : "Muller",
+  "email" : "c.muller@email.com",
+  "password" : "hashed_password_18",
+  "children" : [ {
+    "id" : 117,
+    "parentId" : 0,
+    "firstName" : "Jules",
+    "lastName" : "Muller",
+    "age" : 9,
+    "level" : "CM1",
+    "birthDate" : "2017-02-19"
+  } ]
+}, {
+  "id" : 19,
+  "firstName" : "Fabrice",
+  "lastName" : "Fontaine",
+  "email" : "f.fontaine@email.com",
+  "password" : "hashed_password_19",
+  "children" : [ ]
+}, {
+  "id" : 20,
+  "firstName" : "Valérie",
+  "lastName" : "Roux",
+  "email" : "v.roux@email.com",
+  "password" : "hashed_password_20",
+  "children" : [ {
+    "id" : 118,
+    "parentId" : 0,
+    "firstName" : "Noé",
+    "lastName" : "Roux",
+    "age" : 10,
+    "level" : "CM2",
+    "birthDate" : "2016-11-11"
+  } ]
+} ]

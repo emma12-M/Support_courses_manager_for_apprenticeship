@@ -183,9 +183,10 @@ public class DashboardParentController {
 
             stage.showAndWait(); // Modal : attend la fermeture
 
-            // Rafraîchit les données après inscription
+            // Rafraîchit TOUTES les données après inscription
             showChildren();
             showRegistrations();
+            showNotifications();  // ✅ AJOUT CRUCIAL
             if (infoLabel != null) infoLabel.setText("Données mises à jour.");
 
         } catch (Exception e) {
