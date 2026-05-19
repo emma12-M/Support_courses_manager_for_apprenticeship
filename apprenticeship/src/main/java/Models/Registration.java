@@ -1,5 +1,6 @@
 package Models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.time.LocalDate;
 
 /**
@@ -39,7 +40,9 @@ public class Registration {
     private Payment payment;
 
     // Objets complets — uniquement en mémoire, pas sérialisés
+    @JsonIgnore
     private transient Child child;
+    @JsonIgnore
     private transient TimeSlot timeSlot;
 
     // Constructeur vide — OBLIGATOIRE pour Jackson

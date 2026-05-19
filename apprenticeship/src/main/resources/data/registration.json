@@ -14,6 +14,7 @@
     "remainingInstallments" : 0,
     "paymentType" : null,
     "completed" : false
+<<<<<<< HEAD
   },
   "child" : {
     "id" : 101,
@@ -31,6 +32,8 @@
     "classroom" : null,
     "maxCapacity" : 0,
     "registrationCount" : 0
+=======
+>>>>>>> 0f7ae29576c9066e7f47ef769bbf379a778baeaa
   }
 }, {
   "id" : 2,
@@ -48,6 +51,7 @@
     "remainingInstallments" : 0,
     "paymentType" : null,
     "completed" : false
+<<<<<<< HEAD
   },
   "child" : {
     "id" : 103,
@@ -65,6 +69,8 @@
     "classroom" : null,
     "maxCapacity" : 0,
     "registrationCount" : 0
+=======
+>>>>>>> 0f7ae29576c9066e7f47ef769bbf379a778baeaa
   }
 }, {
   "id" : 3,
@@ -82,6 +88,7 @@
     "remainingInstallments" : 0,
     "paymentType" : null,
     "completed" : false
+<<<<<<< HEAD
   },
   "child" : {
     "id" : 105,
@@ -99,6 +106,8 @@
     "classroom" : null,
     "maxCapacity" : 0,
     "registrationCount" : 0
+=======
+>>>>>>> 0f7ae29576c9066e7f47ef769bbf379a778baeaa
   }
 }, {
   "id" : 4,
@@ -116,6 +125,7 @@
     "remainingInstallments" : 0,
     "paymentType" : null,
     "completed" : false
+<<<<<<< HEAD
   },
   "child" : {
     "id" : 108,
@@ -133,6 +143,8 @@
     "classroom" : null,
     "maxCapacity" : 0,
     "registrationCount" : 0
+=======
+>>>>>>> 0f7ae29576c9066e7f47ef769bbf379a778baeaa
   }
 }, {
   "id" : 5,
@@ -150,6 +162,7 @@
     "remainingInstallments" : 0,
     "paymentType" : null,
     "completed" : false
+<<<<<<< HEAD
   },
   "child" : {
     "id" : 110,
@@ -167,6 +180,8 @@
     "classroom" : null,
     "maxCapacity" : 0,
     "registrationCount" : 0
+=======
+>>>>>>> 0f7ae29576c9066e7f47ef769bbf379a778baeaa
   }
 }, {
   "id" : 6,
@@ -184,6 +199,7 @@
     "remainingInstallments" : 0,
     "paymentType" : null,
     "completed" : false
+<<<<<<< HEAD
   },
   "child" : {
     "id" : 112,
@@ -201,6 +217,8 @@
     "classroom" : null,
     "maxCapacity" : 0,
     "registrationCount" : 0
+=======
+>>>>>>> 0f7ae29576c9066e7f47ef769bbf379a778baeaa
   }
 }, {
   "id" : 7,
@@ -218,6 +236,7 @@
     "remainingInstallments" : 0,
     "paymentType" : null,
     "completed" : false
+<<<<<<< HEAD
   },
   "child" : {
     "id" : 114,
@@ -235,6 +254,8 @@
     "classroom" : null,
     "maxCapacity" : 0,
     "registrationCount" : 0
+=======
+>>>>>>> 0f7ae29576c9066e7f47ef769bbf379a778baeaa
   }
 }, {
   "id" : 8,
@@ -252,6 +273,7 @@
     "remainingInstallments" : 0,
     "paymentType" : null,
     "completed" : false
+<<<<<<< HEAD
   },
   "child" : {
     "id" : 116,
@@ -281,12 +303,47 @@
     "totalAmount" : 2500.0,
     "paidAmount" : 0.0,
     "remainingAmount" : 2500.0,
+=======
+  }
+}, {
+  "id" : 9,
+  "childId" : 70124,
+  "timeSlotId" : 3,
+  "parentId" : 1,
+  "registrationDate" : "2026-05-19",
+  "payment" : {
+    "id" : 70168,
+    "totalAmount" : 500.0,
+    "paidAmount" : 0.0,
+    "remainingAmount" : 500.0,
+    "installmentCount" : 4,
+    "completedInstallments" : 0,
+    "remainingInstallments" : 4,
+    "paymentType" : "SPLIT_PAYMENT",
+    "completed" : false
+  }
+}, {
+  "id" : 10,
+  "childId" : 44097,
+  "timeSlotId" : 5,
+  "parentId" : 1,
+  "registrationDate" : "2026-05-19",
+  "payment" : {
+    "id" : 44177,
+    "totalAmount" : 3000.0,
+    "paidAmount" : 0.0,
+    "remainingAmount" : 3000.0,
+>>>>>>> 0f7ae29576c9066e7f47ef769bbf379a778baeaa
     "installmentCount" : 6,
     "completedInstallments" : 0,
     "remainingInstallments" : 6,
     "paymentType" : "SPLIT_PAYMENT",
     "completed" : false
+<<<<<<< HEAD
   },
   "child" : null,
   "timeSlot" : null
+=======
+  }
+>>>>>>> 0f7ae29576c9066e7f47ef769bbf379a778baeaa
 } ]
