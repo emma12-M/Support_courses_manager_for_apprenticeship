@@ -7,11 +7,6 @@
 }, {
   "id" : 2,
   "parentId" : 1,
-<<<<<<< HEAD
-  "message" : "Inscription de papa papa au créneau \"Mathématiques\" confirmée. Montant du premier versement : 416,67 €",
-  "sent" : true,
-  "sentDate" : "2026-05-19T09:30:19.5307155"
-=======
   "message" : "Inscription de yves Jean Faustin au créneau \"Anglais\" confirmée. Montant du premier versement : 125,00 €",
   "sent" : true,
   "sentDate" : "2026-05-19T09:22:50.2164163"
@@ -21,5 +16,4 @@
   "message" : "Inscription de ajsega hjkzs au créneau \"Informatique\" confirmée. Montant du premier versement : 500,00 €",
   "sent" : true,
   "sentDate" : "2026-05-19T09:40:44.255895"
->>>>>>> 0f7ae29576c9066e7f47ef769bbf379a778baeaa
 } ]

@@ -14,26 +14,6 @@
     "remainingInstallments" : 0,
     "paymentType" : null,
     "completed" : false
-<<<<<<< HEAD
-  },
-  "child" : {
-    "id" : 101,
-    "parentId" : 0,
-    "firstName" : "Lucas",
-    "lastName" : "Dupont",
-    "age" : 8,
-    "level" : "CE2",
-    "birthDate" : "2018-05-12"
-  },
-  "timeSlot" : {
-    "id" : 1,
-    "subject" : "Mathématiques",
-    "schedule" : "2026-05-18T08:30:00",
-    "classroom" : null,
-    "maxCapacity" : 0,
-    "registrationCount" : 0
-=======
->>>>>>> 0f7ae29576c9066e7f47ef769bbf379a778baeaa
   }
 }, {
   "id" : 2,

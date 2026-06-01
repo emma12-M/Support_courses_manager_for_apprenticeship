@@ -143,14 +143,6 @@
   "level" : "CM2",
   "birthDate" : "2016-11-11"
 }, {
-<<<<<<< HEAD
-  "id" : 19464,
-  "parentId" : 1,
-  "firstName" : "papa",
-  "lastName" : "papa",
-  "age" : 0,
-  "level" : "papa",
-=======
   "id" : 70124,
   "parentId" : 1,
   "firstName" : "yves",

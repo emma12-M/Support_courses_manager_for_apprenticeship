@@ -8,11 +8,7 @@
     "capacity" : 30
   },
   "maxCapacity" : 25,
-<<<<<<< HEAD
-  "registrationCount" : 1
-=======
   "registrationCount" : 0
->>>>>>> 0f7ae29576c9066e7f47ef769bbf379a778baeaa
 }, {
   "id" : 2,
   "subject" : "Physique-Chimie",

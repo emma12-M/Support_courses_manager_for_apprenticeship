@@ -199,12 +199,6 @@
   "paymentType" : null,
   "completed" : false
 }, {
-<<<<<<< HEAD
-  "id" : 19485,
-  "totalAmount" : 2500.0,
-  "paidAmount" : 416.6666666666667,
-  "remainingAmount" : 2083.3333333333335,
-=======
   "id" : 70168,
   "totalAmount" : 500.0,
   "paidAmount" : 125.0,
