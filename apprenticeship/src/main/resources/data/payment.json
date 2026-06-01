@@ -213,7 +213,6 @@
   "totalAmount" : 3000.0,
   "paidAmount" : 500.0,
   "remainingAmount" : 2500.0,
->>>>>>> 0f7ae29576c9066e7f47ef769bbf379a778baeaa
   "installmentCount" : 6,
   "completedInstallments" : 1,
   "remainingInstallments" : 5,

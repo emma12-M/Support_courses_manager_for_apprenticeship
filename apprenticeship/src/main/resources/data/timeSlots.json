@@ -30,11 +30,7 @@
     "capacity" : 20
   },
   "maxCapacity" : 15,
-<<<<<<< HEAD
   "registrationCount" : 0
-=======
-  "registrationCount" : 1
->>>>>>> 0f7ae29576c9066e7f47ef769bbf379a778baeaa
 }, {
   "id" : 4,
   "subject" : "SVT",
@@ -56,11 +52,7 @@
     "capacity" : 20
   },
   "maxCapacity" : 18,
-<<<<<<< HEAD
   "registrationCount" : 0
-=======
-  "registrationCount" : 1
->>>>>>> 0f7ae29576c9066e7f47ef769bbf379a778baeaa
 }, {
   "id" : 6,
   "subject" : "Histoire",
